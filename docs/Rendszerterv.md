@@ -5,7 +5,7 @@
 ## 2. Projektterv
 
 ### 2.1 Projektszerepkörök, felelőségek:
-   * Scrum masters: Györkis Tamás
+   * Scrum masters: Bodnár Máté
    * Product owner: Györkis Tamás
      
 ### 2.2 Projektmunkások és felelőségek:
@@ -47,6 +47,7 @@ ingyenes
 
 Admin
 Felhasználó
+Vendég vásárló
 
 ### 5.2 Menühierarchiák
 
