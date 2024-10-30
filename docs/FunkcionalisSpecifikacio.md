@@ -26,7 +26,8 @@ A LEGO webáruház célja, hogy minden korosztály LEGO-rajongóinak igényeit k
 ## 8. Képernyőtervek
 
 ## 9. Forgatókönyvek
-
+A USER megnyitja a webáruházat, és lehetősége van a belépés lehetőségre, miután ezt megtette, lehetősége van böngészni az árukat, azokat szűrni is. Vásárlás esetén több dolgot is elhelyezhet a kosárba, ezek kifezetésére is 2 lehetősége van, egyből kártyával, vagy utánvéttel kártyával/készpénzzel.
+Amennyiben a felületet az ADMIN használja,lehetősége van a sima USER opcióihoz is, de ezen felül megnyílik a lehetőség a raktár kezelésére is. 
 ## 10. Funkció - követelmény megfeleltetése
 
 | Id | Követelmény | Funkció |
