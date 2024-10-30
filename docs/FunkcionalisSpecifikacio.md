@@ -48,5 +48,5 @@ Amennyiben a felületet az ADMIN használja,lehetősége van a sima USER opciói
 
 ## 11. Fogalomszótár
 ADMIN   -    Adminisztrátor
-USER    -    Felhasználó
+USER    -    Felhasználó/Vásárló
 NAVBAR  -    Navigációs sáv
