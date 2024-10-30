@@ -65,6 +65,7 @@ Vendég vásárló
    * Fiókadatok
       * E-mail cím módosítás
       * Jelszó módosítás
+      * Profilkép módosítás/feltöltés
 
 ## 6. Fizikai környezet
 
