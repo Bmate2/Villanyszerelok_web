@@ -1,6 +1,7 @@
 # Funkcionális specifikáció
 
 ## 1. Áttekintés
+A LEGO webáruház célja, hogy bármely korosztálynak lehetővé tegye az egyszerű, letisztult designal,a vásárlás folyamatát.A webáruházba lesz egy Login felület is,ami lehetővé teszi és egyszerűsíti a felhasználó számára a visszatérő vásárlást.Ezt egy adatbázisba fogjuk tárolni, ugyanúgy, mint a raktárban lévő LEGO darabokat, csomagokat is. A vásárló vásárlás után eldöntheti, hogy, kártyával szeretne fizetni egyből, vagy ha megérkezett hozzá a csomag. A webáruházban lehet szűrni az árukat, hogy korosztálynak és témának megfelelő ajánlatokat ajánljon a Webáruház.
 
 ## 2. Jelenlegi helyzet leírása
 
