@@ -18,6 +18,16 @@ A LEGO webáruház célja, hogy minden korosztály LEGO-rajongóinak igényeit k
 | :---: | --- | --- | --- |
 
 ## 7. Használati esetek
+A webáruház felhasználása két esettel rendelkezik:
+
+    Ha vásárlóként lépsz be, akkor lehetőséged van:
+        - A készlet kereséséhez
+        - Rendeléshez
+        - Belépéshez(Adataid elmentéséhez)
+    
+    Ha adminként lépsz be, akkor lehetőséged van:
+        - A USER lehetőségeihez.
+        - LEGO hozzáadásához,elvételéhez.
 
 ## 8. Képernyőtervek
 
