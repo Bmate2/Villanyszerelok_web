@@ -51,6 +51,18 @@ Vendég vásárló
 
 ### 5.2 Menühierarchiák
 
+* Főoldal
+* Belépés
+* Regisztráció
+* Admin nézet:
+   * LEGO hozzáadása, törlés
+* Vásárló nézet:
+   * Készletkereső
+   * Rendelés adatai
+      * Nyomon követés
+      * Rendelés törlés
+      * Adatok módosítása
+   * Fiókadatok
 
 ## 6. Fizikai környezet
 
