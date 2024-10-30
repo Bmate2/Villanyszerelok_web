@@ -47,3 +47,6 @@ Amennyiben a felületet az ADMIN használja,lehetősége van a sima USER opciói
 | K4 | ... | ... |
 
 ## 11. Fogalomszótár
+ADMIN   -    Adminisztrátor
+USER    -    Felhasználó/Vásárló
+NAVBAR  -    Navigációs sáv
