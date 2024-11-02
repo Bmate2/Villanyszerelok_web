@@ -19,3 +19,5 @@ A LEGO webáruház célja, hogy minden korosztály LEGO-rajongóinak igényeit k
 | :---: | --- | --- | --- |
 
 ## 7. Fogalomtár
+ADMIN   -    Adminisztrátor
+USER    -    Felhasználó/Vásárló
