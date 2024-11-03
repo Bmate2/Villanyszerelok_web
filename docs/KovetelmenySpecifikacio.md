@@ -20,6 +20,9 @@ A vásárlás időben és helyszínben korlátozott, ami csökkenti a hozzáfér
 ## 6. Követelménylista
 
 | Id | Modul | Név | Leírás |
-| :---: | --- | --- | --- |
+| :01: | Regisztráció | Felhasználói regisztráció | A felhasználók regisztrálhatnak a webáruházba, hogy elmentsék adataikat és rendeléseiket. |
+| :02: | Termékkeresés | Keresési funkció | A vásárlók termékek között kereshetnek név és ár alapján a gyorsabb vásárlás érdekében. |
+| :03: | Fizetés | Online fizetési opciók | A felhasználók választhatnak a bankkártyás és utánvétes fizetési módok közül. |
+| :04: | Szűrés | Termékszűrés | A felhasználók szűrhetnek a termékek között korosztály és kategória alapján. |
 
 ## 7. Fogalomtár
