@@ -23,7 +23,10 @@ Az új webáruház integrálódik majd a meglévő adatbázissal, valós idejű 
 ## 6. Követelménylista
 
 | Id | Modul | Név | Leírás |
-| :---: | --- | --- | --- |
+| :01: | Regisztráció | Regisztrációs folyamat | A rendszer összegyűjti a felhasználó nevét, e-mail címét és jelszavát a fiók létrehozásához. |
+| :02: | Termékkeresés | Termékkategória keresés | A rendszer megjeleníti a kategóriák listáját, és lehetővé teszi a felhasználóknak a szűrést. |
+| :03: | Fizetés | Bankkártyás fizetés | A rendszer külső fizetési szolgáltatáson keresztül kezeli a bankkártyás fizetéseket. |
+| :04: | Szűrés | Termékszűrés | A felhasználók szűrhetnek a termékek között korosztály és kategória alapján. |
 
 ## 7. Használati esetek
 A webáruház felhasználása két esettel rendelkezik:
