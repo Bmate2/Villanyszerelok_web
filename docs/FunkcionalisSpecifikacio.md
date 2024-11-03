@@ -14,6 +14,8 @@ A LEGO webáruház célja, hogy minden korosztály LEGO-rajongóinak igényeit k
 
 ## 4. Jelenlegi üzleti folyamatok modellje
 
+Jelenleg a készletek kezelése egy belső adatbázisban működik, amely az elérhető termékeket és azok mennyiségét tárolja. Az ügyfelek az üzletben kiválasztják a megvásárolni kívánt termékeket, majd a helyi pénztárban fizetnek, ahol kártyás vagy készpénzes fizetési lehetőségek állnak rendelkezésre. A folyamat minden lépése a fizikai helyszínhez kötött.
+
 ## 5. Igényelt üzleti folyamatok modellje
 
 ## 6. Követelménylista
