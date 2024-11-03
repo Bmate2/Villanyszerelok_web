@@ -16,6 +16,8 @@ A LEGO webáruház célja, hogy minden korosztály LEGO-rajongóinak igényeit k
 
 ## 5. Igényelt üzleti folyamatok modellje
 
+Az új webáruház integrálódik majd a meglévő adatbázissal, valós idejű kapcsolatot biztosítva a raktárkezelő rendszerrel. Az online rendszerhez online bankkártyás fizetési és utánvétes opciók kerülnek kialakításra. A termékek elérhetősége és szállítási folyamatainak kezelése az online vásárlások esetén új logisztikai megoldásokat igényel, amelyek illeszkednek majd a fizikai bolt jelenlegi folyamataihoz. 
+
 ## 6. Követelménylista
 
 | Id | Modul | Név | Leírás |
