@@ -13,6 +13,8 @@ A LEGO webáruház célja, hogy minden korosztály LEGO-rajongóinak igényeit k
 
 ## 5. Igényelt üzleti folyamatok modellje
 
+A vásárlás időben és helyszínben korlátozott, ami csökkenti a hozzáférhetőséget. Az üzlet készlete korlátozott, és a vevők a személyes elérhetőség miatt csak a fizikai bolt nyitvatartási idején belül vásárolhatnak. Emiatt a vállalat szeretne bővíteni egy online webáruházzal, amely rugalmasságot és szélesebb választékot biztosítana a vásárlóknak, elérhetővé téve a termékeket a nap 24 órájában, bárhonnan.
+
 ## 6. Követelménylista
 
 | Id | Modul | Név | Leírás |
