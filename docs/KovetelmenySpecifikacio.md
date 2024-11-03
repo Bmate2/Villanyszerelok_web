@@ -11,6 +11,8 @@ A LEGO webáruház célja, hogy minden korosztály LEGO-rajongóinak igényeit k
 
 ## 4. Jelenlegi üzleti folyamatok modellje
 
+Jelenleg az áruház kizárólag fizikai üzletekben értékesíti termékeit. Az ügyfelek az üzletek nyitvatartási idejében látogathatják meg a boltot, személyesen választhatnak a polcokon található termékek közül, majd a pénztárnál fizethetnek. Az elérhető termékválasztékot az adott üzlet készlete korlátozza, így egyes népszerű készletek esetenként nem kaphatók. A vásárlás csak helyben és személyesen lehetséges, ami korlátozza a hozzáférhetőséget és az értékesítés bővítésének lehetőségét.
+
 ## 5. Igényelt üzleti folyamatok modellje
 
 ## 6. Követelménylista
