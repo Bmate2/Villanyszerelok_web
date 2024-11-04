@@ -262,3 +262,24 @@ például. Teszt #01 | Regisztráció | A felhasználó az adatok megadásával 
 ## 12. Telepítési terv
 
 ## 13. Karbantartási terv
+
+
+Karbantartási feladatok
+Corrective Maintenance
+
+A felhasználók által bejelentett hibák és problémák javítása. Ezeket rendszeresen ellenőrizzük és kijavítjuk a felhasználói élmény javítása érdekében.
+
+Adaptive Maintenance
+
+Az alkalmazást naprakészen tartjuk, és biztosítjuk a kompatibilitást a használt technológiák, például az új böngésző verziók vagy szerverfrissítések esetén.
+Igény szerint módosítjuk az alkalmazást, hogy megfeleljen az új jogszabályoknak vagy üzleti követelményeknek.
+
+Perfective Maintenance
+
+Az alkalmazás teljesítményének javítása, új funkciók hozzáadása a felhasználói élmény és a rendszer hatékonyságának növelése érdekében.
+Felhasználói visszajelzések alapján optimalizáljuk a meglévő funkciókat.
+
+Preventive Maintenance
+
+Olyan potenciális problémák elhárítása, amelyek még nem észlelhetők, de a jövőben komolyabb gondokat okozhatnak.
+Biztonsági frissítések és rendszeres ellenőrzések annak érdekében, hogy a rendszer védett maradjon az újabb sérülékenységekkel szemben.
