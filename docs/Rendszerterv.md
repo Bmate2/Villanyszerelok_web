@@ -112,4 +112,6 @@ például. Teszt #01 | Regisztráció | A felhasználó az adatok megadásával 
 
 ## 12. Telepítési terv
 
+Semmiféle szoftver telepítése nem szükséges, a weboldal bármilyen böngészőből futtatható.
+
 ## 13. Karbantartási terv
