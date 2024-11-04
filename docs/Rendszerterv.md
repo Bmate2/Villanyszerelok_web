@@ -124,6 +124,8 @@ Vendég vásárló
 
 ## 11. Tesztterv
 
+A tesztelés célja a rendszer és annak komponensei funkcionalitásának alapos vizsgálata, valamint az üzleti szolgáltatások megfelelő működésének ellenőrzése. A teszteket a fejlesztői csapat végzi, és az eredményeket külön fájlokban dokumentálják.
+
 ### Tesztesetek
 
  | Teszteset | Elvárt eredmény | 
