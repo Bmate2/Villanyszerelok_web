@@ -33,6 +33,17 @@ ingyenes
 
 | ID | Megnevezés | Leírás |
 | --- | --- | --- |
+| K1	| Főoldal | Az alkalmazás kezdőlapja, ahonnan a felhasználók navigálhatnak a különböző funkciókhoz.
+| K2	| Belépés | Lehetővé teszi a felhasználók számára, hogy bejelentkezzenek a fiókjukba.
+| K3	| Regisztráció | Új felhasználók számára regisztrációs lehetőséget biztosít.
+| K4	| Admin LEGO kezelés |Az adminok hozzáadhatnak és törölhetnek LEGO termékeket az adatbázisból.
+| K5	| Készletkereső | Vásárlók számára lehetőséget biztosít a LEGO készletben való keresésre.
+| K6	| Rendelés nyomon követése | Vásárlók számára lehetővé teszi rendelésük állapotának követését.
+| K7	| Rendelés törlése | Vásárlók lemondhatják rendelésüket az alkalmazásban.
+| K8	| Rendelés adatainak módosítása | Vásárlók szerkeszthetik rendelésük részleteit a megfelelő határidőn belül.
+| K9	| E-mail cím módosítása | Vásárlók frissíthetik a regisztráció során megadott e-mail címüket.
+| K10 | Jelszó módosítása | Vásárlók megváltoztathatják jelszavukat a fiókjukban.
+| K11 | Profilkép módosítása/feltöltése | Vásárlók feltölthetnek vagy módosíthatnak profilképet a fiókjukban.
 
 ### Nemfunkcionális követelmények
 

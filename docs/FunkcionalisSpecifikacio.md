@@ -52,6 +52,15 @@ Amennyiben a felületet az ADMIN használja,lehetősége van a sima USER opciói
 | Id | Követelmény | Funkció |
 | :---: | --- | --- |
 | K4 | ... | ... |
+|K1 | Az oldal fő tartalmai legyenek elérhetők | Főoldal
+|K2 | A felhasználók beléphessenek a fiókjukba | Belépés
+|K3 | Új felhasználók regisztrálhassanak | Regisztráció
+|K4 | Adminok kezelhessék a LEGO készletet	Admin nézet: LEGO hozzáadása, | törlés
+|K5 | Vásárlók keresést végezhessenek a készleten | Vásárló nézet: Készletkereső
+|K6 | A vásárlók láthassák rendelésük részleteit | Rendelés adatai: Nyomon követés
+|K7 | A vásárlók rendeléseiket törölhessék | Rendelés adatai: Rendelés törlés
+|K8 | A vásárlók módosíthassák rendelésük adatait | Rendelés adatai: Adatok |módosítása
+|K9 | A vásárlók módosíthassák fiókadataikat | Fiókadatok: E-mail cím |módosítás, Jelszó módosítás, Profilkép módosítás/feltöltés
 
 ## 11. Fogalomszótár
 ADMIN   -    Adminisztrátor
