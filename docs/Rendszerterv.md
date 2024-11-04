@@ -210,6 +210,35 @@ created_at (timestamp) – Token létrehozásának dátuma.
 
 ## 10. Implementációs terv
 
+
+Web (Frontend)
+
+HTML, CSS, JavaScript, Blade: A felhasználói felület készítéséhez használjuk őket. Az elemeket külön fájlokba szervezzük, hogy átlátható és könnyen módosítható legyen. A Blade sablonmotor segít a dinamikus oldalak létrehozásában és a visszatérő elemek kezelésében.
+
+Backend (Szerveroldali logika)
+
+Laravel PHP keretrendszer: Az MVC architektúra alapján szervezzük az alkalmazást, így a kód logikusan felépített, könnyen karbantartható és bővíthető. Az autentikáció és jogosultságkezelés köztes rétegekkel történik, a Laravel ORM pedig egyszerűsíti az adatbázis-műveleteket.
+
+Adatbázis
+
+MySQL: Az adatbázis tárolja a felhasználókat, termékeket és rendeléseket. Laravel ORM segítségével könnyen integrálható, ami gyors és hatékony adatkezelést biztosít.
+
+API (REST szolgáltatások)
+
+Laravel RESTful API: Az API végpontok biztosítják az adatok elérését más alkalmazások (például mobilalkalmazások) számára is. Autentikációhoz API tokeneket használunk.
+
+Fájlok tárolása
+
+Laravel Storage, AWS S3 vagy helyi tárolás: Profilképek és más fájlok tárolására használjuk, rugalmasan választható helyi vagy felhő alapú tárhely.
+
+Gyorsítótárazás
+
+Redis vagy Memcached: A gyakran használt adatok gyorsítótárazása segíti a gyorsabb betöltést és csökkenti az adatbázis terhelését.
+
+Verziókezelés és folyamatos integráció
+
+Git, GitHub Actions/GitLab CI: Verziókezeléshez Git-et használunk, a CI/CD pipeline pedig automatizálja a telepítést, így felgyorsítva a fejlesztési folyamatot.
+
 ## 11. Tesztterv
 
 ### Tesztesetek
