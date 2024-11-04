@@ -10,7 +10,9 @@ A megrendelő egy LEGO webáruház, ahol szerettek volna egy működő webáruh�
 
 ## 3. Vágyálomrendszer leírása
 
-A LEGO webáruház célja, hogy minden korosztály LEGO-rajongóinak igényeit kielégítse egy egyszerű, mégis izgalmas vásárlási élmény nyújtásával. A webáruház kulcsfontosságú funkciói, mint a készletkereső és ajánló algoritmusok, lehetővé teszik, hogy a vásárlók gyorsan rátaláljanak az új és ritka készletekre. A felhasználói élményt egy letisztult felület biztosítja.
+A LEGO webáruház célja, hogy minden korosztály LEGO-rajongóinak igényeit kielégítse egy egyszerű, mégis izgalmas vásárlási élmény nyújtásával. A platform lehetőséget kínál mind az újoncoknak, mind a tapasztalt gyűjtőknek, hogy könnyedén megtalálják a számukra legmegfelelőbb készleteket, legyen szó klasszikus, modern vagy éppen ritka kiadásokról. A webáruház kulcsfontosságú funkciói, mint a fejlett készletkereső, amely lehetővé teszi a vásárlók eligazodását az oldalon. Emellett a személyre szabott ajánló algoritmusok olyan készleteket is javasolnak, amelyek a vásárlók érdeklődési köréhez illeszkednek, így akár új kedvencekre is rátalálhatnak.
+
+A felhasználói élményt egy letisztult felület biztosítja. A vásárlók lehetőséget kapnak arra is, hogy saját LEGO-élményeiket megosszák másokkal értékeléseken, véleményeken keresztül, illetve böngésszenek a közösségi visszajelzések között.
 
 ## 4. Jelenlegi üzleti folyamatok modellje
 
