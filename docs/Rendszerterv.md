@@ -12,8 +12,28 @@
    * Fejlesztők és tesztelők: a csapat tagjai
 
 ### 2.3 Ütemterv:
-|Funkció                  | Feladat                                | Prioritás | Becslés (óra) | Aktuális becslés (óra) | Eltelt idő (óra) | Becsült idő (óra) |
-|-------------------------|----------------------------------------|-----------|---------------|------------------------|------------------|---------------------|
+
+| Funkció                  | Feladat                                | Prioritás | Becslés (óra) | Aktuális becslés (óra) | Eltelt idő (óra) | Becsült idő (óra) |
+|--------------------------|----------------------------------------|-----------|---------------|------------------------|------------------|---------------------|
+| Követelmény specifikáció | Megírás                                | 1         | 2             | 2                      | 2                | 2                   |
+| Funkcionális specifikáció| Megírás                                | 1         | 3             | 3                      | 3                | 3                   |
+| Rendszerterv             | Megírás                                | 1         | 4             | 4                      | 4                | 4                   |
+| Program                  | Képernyőtervek elkészítése             | 2         | 3             | 3                      | 3                | 3                   |
+| Program                  | Prototípus elkészítése                 | 3         | 12            | 12                     | 0                | 12                  |
+| Program                  | Főoldal fejlesztése                    | 3         | 6             | 6                      | 0                | 6                   |
+| Program                  | Belépési funkciók megvalósítása        | 3         | 4             | 4                      | 0                | 4                   |
+| Program                  | Regisztrációs funkciók megvalósítása   | 3         | 4             | 4                      | 0                | 4                   |
+| Program                  | Admin nézet - LEGO hozzáadása/törlés   | 3         | 10            | 10                     | 0                | 10                  |
+| Program                  | Vásárló nézet - Készletkereső          | 3         | 8             | 8                      | 0                | 8                   |
+| Program                  | Vásárló nézet - Rendelés adatai        | 3         | 6             | 6                      | 0                | 6                   |
+| Program                  | Nyomon követés funkció                 | 3         | 4             | 4                      | 0                | 4                   |
+| Program                  | Rendelés törlés funkció                | 3         | 4             | 4                      | 0                | 4                   |
+| Program                  | Rendelési adatok módosítása funkció    | 3         | 4             | 4                      | 0                | 4                   |
+| Program                  | Fiókadatok - E-mail cím módosítás      | 3         | 3             | 3                      | 0                | 3                   |
+| Program                  | Fiókadatok - Jelszó módosítás          | 3         | 3             | 3                      | 0                | 3                   |
+| Program                  | Fiókadatok - Profilkép módosítás       | 3         | 4             | 4                      | 0                | 4                   |
+| Program                  | Teljes rendszer tesztelése             | 4         | 8             | 8                      | 0                | 8                   |
+
 
 ### 2.4 Mérföldkövek:
    * Prototípus átadása
