@@ -71,12 +71,13 @@ Vendég vásárló
 
 ### Vásárolt softwarekomponensek és külső rendszerek
 
-### Hardver topológia
-
-### Fizikai alrendszerek
+* Nincsenek vásárolt softwarekomponensek
 
 ### Fejlesztő eszközök
 
+* Visual Studio
+* Github 
+* Trello
 
 ## 8. Architekturális terv
 
