@@ -82,12 +82,13 @@ Vendég vásárló
 
 ### Vásárolt softwarekomponensek és külső rendszerek
 
-### Hardver topológia
-
-### Fizikai alrendszerek
+* Nincsenek vásárolt softwarekomponensek
 
 ### Fejlesztő eszközök
 
+* Visual Studio
+* Github 
+* Trello
 
 ## 8. Architekturális terv
 
@@ -283,3 +284,5 @@ Preventive Maintenance
 
 Olyan potenciális problémák elhárítása, amelyek még nem észlelhetők, de a jövőben komolyabb gondokat okozhatnak.
 Biztonsági frissítések és rendszeres ellenőrzések annak érdekében, hogy a rendszer védett maradjon az újabb sérülékenységekkel szemben.
+=======
+Semmiféle szoftver telepítése nem szükséges, a weboldal bármilyen böngészőből futtatható.
