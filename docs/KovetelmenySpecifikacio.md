@@ -28,3 +28,5 @@ A vásárlás időben és helyszínben korlátozott, ami csökkenti a hozzáfér
 | :04: | Szűrés | Termékszűrés | A felhasználók szűrhetnek a termékek között korosztály és kategória alapján. |
 
 ## 7. Fogalomtár
+ADMIN   -    Adminisztrátor
+USER    -    Felhasználó/Vásárló
