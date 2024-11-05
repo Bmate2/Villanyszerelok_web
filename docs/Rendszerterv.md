@@ -41,11 +41,17 @@
 ## 3. Üzleti folyamatok modellje
 
 ### 3.1 Üzleti szereplők
-Főként a diákok de bárki használhatja
+
+Diákok: Elsődleges célcsoport.
+Egyéb felhasználók.
+Adminisztrátorok: A webáruház tartalmát, készletét és felhasználói adatokat kezelik.
 
 ### 3.2 Üzleti folyamatok
 
-ingyenes
+Ingyenes hozzáférés: A webáruház használata mindenki számára díjmentes.
+Regisztráció: Profil létrehozása adatok eltárolása érdekében gyorsabb vásárláshoz.
+Keresés, szűrés: Keresési és szűrési lehetőségek ár és téma alapján.
+Kosár, fizetés: Termékek kosárba helyezése, fizetési módszer kiválasztása, bankkártyával vagy utánvéttel.
 
 ## 4. Követelmények
 
