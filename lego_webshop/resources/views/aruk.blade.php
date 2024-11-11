@@ -29,7 +29,7 @@
           Áruk szűrése
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a <! --href="{{ route('aruk') }}"-->  class="dropdown-item" >Minden áru</a></li>
+          <li><a href="{{ route('aruk') }}" class="dropdown-item" href="#">Minden áru</a></li>
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="#">Valamilyen áruk</a></li>
           
