@@ -16,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 Route::get('/aruk', function () {
     return view('aruk');
-});
+})->name('aruk');
 Route::get('/register', function () {
     return view('auth/register');
 });
