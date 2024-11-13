@@ -1,4 +1,3 @@
-@section('navbar')
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
@@ -15,7 +14,7 @@
           <a class="nav-link" href="">Link</a>
         </li>
         <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Áruk szűrése
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -34,4 +33,3 @@
     </div>
   </div>
 </nav>
-@endsection

@@ -30,7 +30,7 @@
 
             <!-- Page Content -->
             <main>
-                @yield('navbar')
+                
                 {{ $slot }}
             </main>
         </div>
