@@ -124,6 +124,9 @@ Apache
 
 ### Adatbázis rendszer
 
+![adatbázis szerkezete](image.png)
+
+
 1. Kliens réteg
 
 Felhasználói böngésző: A felhasználói felületet a böngésző szolgáltatja, ahonnan a vásárlók és az adminisztrátorok elérhetik a rendszer funkcióit (például bejelentkezés, termékkezelés, rendelés követés).
