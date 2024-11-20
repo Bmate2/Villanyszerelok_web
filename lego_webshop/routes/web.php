@@ -32,6 +32,7 @@ Route::get('/login', function () {
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+
 Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
 
 Route::get('/dashboard', function () {
@@ -43,5 +44,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/login', [ProfileController::class, 'loginCheck'])->name('loginPage');
 
 require __DIR__.'/auth.php';

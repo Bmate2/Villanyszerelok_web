@@ -57,4 +57,13 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
+
+    public function loginCheck(Request $request): RedirectResponse
+    {
+        if(Auth::check()){
+            return redirect()->route('login');
+        }
+
+        return view('home');
+    }
 }

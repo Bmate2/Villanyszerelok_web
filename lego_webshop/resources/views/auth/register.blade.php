@@ -98,7 +98,7 @@
                 href="{{ route('login') }}">
                 {{ __('Már regisztráltál?') }}
             </a>
-
+            
             <button type="submit" 
                     class=" bg-yellow-500 
                             text-white 
