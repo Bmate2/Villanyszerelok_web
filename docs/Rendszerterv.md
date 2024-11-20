@@ -258,6 +258,5 @@ Felhasználói visszajelzések alapján optimalizáljuk a meglévő funkciókat.
 Preventive Maintenance
 
 Olyan potenciális problémák elhárítása, amelyek még nem észlelhetők, de a jövőben komolyabb gondokat okozhatnak.
-Biztonsági frissítések és rendszeres ellenőrzések annak érdekében, hogy a rendszer védett maradjon az újabb sérülékenységekkel szemben.
-=======
+Biztonsági frissítések és rendszeres ellenőrzések annak érdekében, hogy a rendszer védett maradjon az újabb sérülékenységekkel szemben. 
 Semmiféle szoftver telepítése nem szükséges, a weboldal bármilyen böngészőből futtatható.
