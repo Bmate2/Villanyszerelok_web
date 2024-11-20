@@ -180,60 +180,7 @@ interneten
 
 ## 9. Adatbázis terv
 
-1. Users (Felhasználók)
-
-id (int, primary key) – Egyedi azonosító.
-name (string) – Felhasználó neve.
-email (string, unique) – E-mail cím (egyedi).
-password (string) – Hashelt jelszó.
-profile_picture (string, nullable) – Profilkép fájlneve vagy URL-je.
-role (enum: 'admin', 'customer') – Felhasználói jogosultság (admin vagy vásárló).
-created_at (timestamp) – Regisztráció dátuma.
-updated_at (timestamp) – Utolsó módosítás dátuma.
-
-2. LEGO_Items (LEGO termékek)
-
-id (int, primary key) – Egyedi azonosító.
-name (string) – LEGO termék neve.
-description (text, nullable) – Termék leírása.
-price (decimal) – Ár.
-stock_quantity (int) – Készleten lévő mennyiség.
-created_at (timestamp) – Termék hozzáadásának dátuma.
-updated_at (timestamp) – Utolsó módosítás dátuma.
-
-3. Orders (Rendelések)
-
-id (int, primary key) – Egyedi azonosító.
-user_id (int, foreign key) – Hivatkozás a felhasználóra.
-status (enum: 'pending', 'shipped', 'delivered', 'cancelled') – Rendelés állapota.
-total_price (decimal) – Rendelés összértéke.
-created_at (timestamp) – Rendelés dátuma.
-updated_at (timestamp) – Utolsó módosítás dátuma.
-
-4. Order_Items (Rendelés tételek)
-
-id (int, primary key) – Egyedi azonosító.
-order_id (int, foreign key) – Hivatkozás a rendelésre.
-lego_item_id (int, foreign key) – Hivatkozás a LEGO termékre.
-quantity (int) – Rendelésben szereplő mennyiség.
-price (decimal) – Egységár (a rendelés időpontjában).
-
-5. Addresses (Címek)
-
-id (int, primary key) – Egyedi azonosító.
-user_id (int, foreign key) – Hivatkozás a felhasználóra.
-address_line1 (string) – Cím első sora.
-address_line2 (string, nullable) – Cím második sora (opcionális).
-city (string) – Város.
-postal_code (string) – Irányítószám.
-country (string) – Ország.
-created_at (timestamp) – Cím hozzáadásának dátuma.
-updated_at (timestamp) – Utolsó módosítás dátuma.
-6. Password_Resets (Jelszó helyreállítások)
-id (int, primary key) – Egyedi azonosító.
-user_id (int, foreign key) – Hivatkozás a felhasználóra.
-token (string) – Jelszó helyreállító token.
-created_at (timestamp) – Token létrehozásának dátuma.
+![Adatbázisterv](image.png)
 
 ## 10. Implementációs terv
 
