@@ -1,7 +1,7 @@
 # Rendszerterv
 
 ## 1. A rendszer célja
-
+A rendszer célja,hogy a létrehozott webáruházzal egyszerűsítsük az áruház dolgait,felgyorsítsuk a folyamatát a vásárlásoknak és növeljük azok mennyiségét is az egyszerű letisztult webáruházzal.Lehetőség lesz az áruk szűrésére,külön Admin és Guest felület lesz elérhető,és természetesen a rendelésre is.A webáruház Laravel segítségével lesz elkészítve.
 ## 2. Projektterv
 
 ### 2.1 Projektszerepkörök, felelőségek:
