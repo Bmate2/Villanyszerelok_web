@@ -237,6 +237,17 @@ például. Teszt #01 | Regisztráció | A felhasználó az adatok megadásával 
 
 ## 12. Telepítési terv
 
+1.Lépés: Projekt leklónozása GitHubról
+   1.1.Lépés: Composer telepitése
+2.Lépés: A .env.example fájl tartalmának kimásolása
+   2.1.Lépés: Új fájl létrehozása a főmappában .env néven és be kell illeszteni .env.example tartalmát
+   2.2.Lépés: Adatbázisnév beállitása (DB_DATABASE=adatbázisNév)
+3.Lépés: XAMPP szerver futtatása
+4.Lépés: Kulcs generáláshoz "php artisan key:generate"
+5.Lépés: Adatbázis létrehozásához "php artisan migrate" 
+6.Lépés: Az inditáshoz "php artisan serve" valamint egy másik terminálba "npm install"
+7.Lépés: "npm run dev"
+
 ## 13. Karbantartási terv
 
 
