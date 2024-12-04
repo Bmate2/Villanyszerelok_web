@@ -28,20 +28,19 @@
                     </div>
                 </div>
             @endfor
-
-            <!-- Plusz gomb -->
-            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-center justify-content-center">
-                <div class="card">
-                    <a href="" class="card-link">
-                        <div class="card-body">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAOa2jJvD7LuyiNtc3iOKkS4zYwdOYglWdQA&s" class="card-img-top" alt="">
-                        </div>
-                    </a>
-                </div>
-            </div>
         </div>
     @endif
-</div>
+        <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-center justify-content-center">
+            <div class="card">
+                <a href="/admin/productadd" class="card-link">
+                    <div class="card-body">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAOa2jJvD7LuyiNtc3iOKkS4zYwdOYglWdQA&s" class="card-img-top" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+</div> 
 @include('layouts.footer')
 </body>
 </html>
