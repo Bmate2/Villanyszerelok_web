@@ -25,12 +25,16 @@
           <li><a class="dropdown-item" href="#">Amolyan áruk</a></li>
         </ul>
       </li>
+
         
       </ul>
       <div class="container-fluid">
         <div class="d-flex justify-content-end align-items-center">
             @auth
                 <div class="d-flex align-items-center">
+                  @if(auth()->user()->isAdmin())
+                    <a class="nav-link" href="{{ route('admin.dashboard') }}">Admin Felület</a>
+                  @endif
                     <img class="rounded-4 img-fluid" src="https://miro.medium.com/v2/resize:fit:1000/0*qS3X0bzoxuD03Vr-.jpg" alt="Avatar" style="max-width: 75px; max-height: 75px;">
                     <a class="ms-3">{{ auth()->user()->name }}</a>
                 </div>
