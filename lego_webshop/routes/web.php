@@ -50,6 +50,7 @@ Route::get('/login', [ProfileController::class, 'loginCheck'])->name('loginPage'
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/admindashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/productadd', [AdminController::class, 'productadd'])->name('admin.productadd');
 });
 
 require __DIR__.'/auth.php';

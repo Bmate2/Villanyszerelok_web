@@ -13,4 +13,8 @@ class AdminController extends Controller
         $products = DB::table('products')->get();
         return view('admin.dashboard', compact('products'));
     }
+
+    public function productadd(){
+        return view('admin.productadd');
+    }
 }
