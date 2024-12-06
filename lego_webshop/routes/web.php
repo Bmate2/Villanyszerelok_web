@@ -53,4 +53,6 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/productadd', [AdminController::class, 'productadd'])->name('admin.productadd');
 });
 
+Route::post('/product/{productId}/reviews', [ProductController::class, 'addReview'])->name('reviews.add');
+
 require __DIR__.'/auth.php';

@@ -19,7 +19,9 @@ return new class extends Migration
             $table->decimal('price', 10, 2);
             $table->string('image_url')->nullable();
             $table->integer('sales_count');
-            $table->timestamps("");
+            $table->integer('rating_count')->default(0)->nullable();
+            $table->decimal('rating_avg', 3, 2)->default(0)->nullable();
+            $table->timestamps();
         });
     }
 

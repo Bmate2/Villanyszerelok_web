@@ -90,6 +90,7 @@ h1 {
 
 /* Értékelés doboz */
 .reviews-box {
+    padding: 20px;
     width: 30%; /* Értékelés box szélessége, hogy a description mellett elférjen */
 }
 .actions-box p

@@ -13,7 +13,7 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        Product::truncate();
+        
 
         Product::create([
             'name' => 'Lego Star Wars X-Wing Fighter',
