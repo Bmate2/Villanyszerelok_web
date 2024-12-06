@@ -1,0 +1,121 @@
+body {
+    position: relative;
+    height: 100vh;
+    color: #333;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #32f8ff;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+
+.product-container
+{
+    margin-top: 50px;
+    margin-right: 15%;
+    margin-left: 15%;
+    width: 70%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+
+}
+/* Inner container módosítása */
+.inner-container {
+    display: flex;
+    flex-direction: column; /* A bal és jobb oldal egymás alatt lesz */
+    width: 100%; /* A szülő elem 80%-át használja */
+    gap: 5px; /* Térköz a div-ek között */
+    margin-top: 20px; /* Kis távolság a h1 és a tartalom között */
+
+}
+
+/* Bal oldal */
+.left-side {
+    display: flex;
+    flex-direction: row; /* A három box vízszintesen lesz elhelyezve */
+    width: 100%;
+    height: 500px;
+    gap: 5px; /* Térköz a div-ek között */
+}
+
+/* Jobb oldal */
+.right-side {
+    display: flex;
+    flex-direction: row; /* A description és reviews egymás mellett legyenek */
+    gap: 5px; /* Térköz a box-ok között */
+    height: 200px;
+    width: 100%;
+}
+
+/* Galéria doboz */
+.gallery-box {
+    background-color: lightgray;
+    width: 15%;
+    border: 1px solid black;
+}
+
+/* Aktuális kép nagyban */
+.image-box {
+    display: flex; /* Flexbox elrendezés */
+    justify-content: center; /* Képek vízszintes középre igazítása */
+    align-items: center; /* Képek függőleges középre igazítása */
+    gap: 5px; /* Távolság a képek között */
+    flex: 1;
+    flex-wrap: wrap; /* Ha több kép van, akkor új sorba kerülhetnek */
+    border: 1px solid black;
+}
+
+/* Funkciók, pl. kosárba helyezés */
+.actions-box {
+    padding: 30px;
+    background-color: #FFD700;
+    width: 25%; /* Az akciók doboz kitölti a rendelkezésre álló helyet */
+    border: 1px solid black;
+}
+
+/* Leírás doboz */
+.description-box {
+    padding: 20px;
+    flex: 1; /* Leírás box szélessége, hogy a reviews mellett elférjen */
+
+}
+
+/* Értékelés doboz */
+.reviews-box {
+    width: 30%; /* Értékelés box szélessége, hogy a description mellett elférjen */
+}
+.actions-box p
+{
+    text-shadow: 
+        1px 1px 0 black,  /* Felső bal */
+        -1px -1px 0 black, /* Alsó jobb */
+        1px -1px 0 black, /* Felső jobb */
+        -1px 1px 0 black; /* Alsó bal */
+    text-align: right;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.image-box img {
+    width: 100%; /* A képek szélességét 100%-ra állítja */
+    height: 100%; /* A képek magasságát automatikusan arányosítja */
+    object-fit: cover; /* Kép kitöltése az elemben, de az arányok megtartása */
+    max-width: 490px; /* A képek maximális szélessége */
+    max-height: 490px; /* A képek maximális magassága */
+}
+.description-box p
+{
+    text-align: left;
+    font-size: 5mm;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}

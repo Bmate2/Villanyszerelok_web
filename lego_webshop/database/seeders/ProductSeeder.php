@@ -101,7 +101,6 @@ class ProductSeeder extends Seeder
             'description' => 'Építsd meg a Minecraft világát a Lego Minecraft The Cave szettel.',
             'stock' => 25,
             'price' => 3499.99,
-            'image_url' => 'https://example.com/lego-minecraft-cave.jpg',
             'sales_count' => 160
         ]);
 
