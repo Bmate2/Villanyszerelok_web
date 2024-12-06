@@ -34,24 +34,22 @@ class ProductController extends Controller
     }
     public function addReview(Request $request, $productId)
     {
-        // A termék keresése
+
         $product = Product::findOrFail($productId);
 
-        // Értékelés validálása
         $validated = $request->validate([
-            'rating' => 'required|integer|between:1,5', // Az értékelés 1 és 5 között lehet
-            'review' => 'nullable|string|max:1000', // A szöveges értékelés opcionális
+            'rating' => 'required|integer|between:1,5', 
+            'review' => 'nullable|string|max:1000', 
         ]);
 
-        // Új értékelés hozzáadása
         $review = new Review();
         $review->rating = $validated['rating'];
         $review->review = $validated['review'];
         $review->product_id = $product->id;
-        $review->user_id = auth()->id(); // Ha van autentikáció
+        $review->user_id = auth()->id();
         $review->save();
 
-        // Frissítjük a termék értékelés átlagot
+
         $product->rating_count = $product->reviews()->count();
         $product->rating_avg = $product->reviews()->avg('rating');
         $product->save();

@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\AdminController;
 
 /*
@@ -47,6 +48,8 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/login', [ProfileController::class, 'loginCheck'])->name('loginPage');
+
+Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/admindashboard', [AdminController::class, 'index'])->name('admin.dashboard');
