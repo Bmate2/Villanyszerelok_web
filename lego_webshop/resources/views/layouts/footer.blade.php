@@ -1,5 +1,5 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
+<div style="height: 35%;"></div>
 <footer class="py-4 mt-5">
 <img src="/images/logo.png">
     <div class="container">
