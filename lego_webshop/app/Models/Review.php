@@ -9,7 +9,6 @@ class Review extends Model
 {
     use HasFactory;
 
-    // Kapcsolat a Product modellel
     public function product()
     {
         return $this->belongsTo(Product::class);

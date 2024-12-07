@@ -15,91 +15,158 @@
 
 <div>
     <div class="product-container">
+
+    @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        @if(session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
+
+
         <h1>{{ $product->name }}</h1>
         <div class="inner-container">
-            <!-- Bal oldali rész -->
             <div class="left-side">
                 <div class="gallery-box">
-                    <!-- Képek felsorolása -->
+
                      
                 </div>
                 <div class="image-box">
-                    <!-- Aktuális kép nagyban -->
                     <img src="{{ $product->image_url ?? '/images/placeholder.jpg' }}" class="current-image" alt="{{ $product->name }}">
                 </div>
-                <div class="actions-box">
-                    <a><p class="action">Kosárba</p></a>
-                    <a><p class="action">Értékelés</p></a>
-                    <p></p>
-                    <!-- Funkciók, pl kosárba helyezés -->
+                <div class="actions-box">                   
+                        @if($product->category == 'Other')
+                            <p>Kategória: Egyéb</p>
+                        @else
+                            <p>Kategória: {{ $product->category }}</p>
+                        @endif
+                        @if($product->stock != 0)
+                            <p>Raktáron</p>
+                        @else
+                            <p>Elfogyott</p>
+                        @endif
+                        <p class="price">Ár: {{ $product->price }}FT</p>
+                        <a class="btn-cart">Kosárba</a>
                 </div>
             </div>
 
-            <!-- Jobb oldali rész -->
             <div class="right-side">
-                <!-- Leírás -->
                 <div class="description-box">
-                    <!-- A leírás helye -->
                     <p>{{ $product->description }}</p>
                 </div>
                 
-                <!-- Értékelés -->
                 <div class="reviews-box">
-                    <!-- Az értékelés helye -->
                     <p>Értékelés: {{ $product->rating_avg }} ({{ $product->rating_count }} értékelés)</p>
+                    <div class="review-container">
+                        @if(Auth::check())
+                            <form id="review-form" action="{{ route('reviews.add', $product->id) }}" method="POST" class="review-form">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="rating">Értékelés (1-5):</label>
+                                    <input type="number" id="rating" name="rating" min="1" max="5" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="review">Vélemény:</label>
+                                    <textarea id="review" name="review" rows="4" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-submit">Értékelés küldése</button>
+                                </div>
+                            </form>
+                        @else
+                        <div class="form-group">
+                                    <label for="rating">Értékelés (1-5):</label>
+                                    <input type="number" id="rating" name="rating" min="1" max="5" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="review">Vélemény:</label>
+                                    <textarea id="review" name="review" rows="4" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                            <button id="login-btn" class="btn btn-submit">Értékelés küldése</button>
+                            </div>
+                        @endif
+
+                        <div id="login-modal" class="modal">
+                            <div class="modal-content">
+                                <h3>Be kell jelentkezned, hogy értékelést adhass!</h3>
+                                <a href="{{ route('login') }}" class="btn btn-link">Kattints ide a bejelentkezéshez</a>
+                                <button onclick="closeModal()" class="btn btn-close"></button>
+                            </div>
+                        </div>
+                        <div id="overlay" class="overlay"></div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <hr>
+        <div class="similarProducts">
+            <h3>Hasonló termékek</h3>
+            <div id="productCarousel1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-between">
+                            @foreach($similarProducts->take(4) as $similarProduct)
+                                <div class="card">
+                                    <a href="{{ route('product.show', ['id' => $similarProduct->id]) }}" class="card-link">
+                                        <img src="{{ $similarProduct->image_url ?? '/images/placeholder.jpg' }}" class="card-img-top" alt="{{ $similarProduct->name }}">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{ $similarProduct->name }}</h5>
+                                            <p class="card-text">{{ $similarProduct->description }}</p>
+                                            <p class="text-success"><strong>{{ number_format($similarProduct->price, 0, ',', ' ') }} Ft</strong></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between">
+                            @foreach($similarProducts->skip(4)->take(4) as $similarProduct)
+                                <div class="card">
+                                    <a href="{{ route('product.show', ['id' => $similarProduct->id]) }}" class="card-link">
+                                        <img src="{{ $similarProduct->image_url ?? '/images/placeholder.jpg' }}" class="card-img-top" alt="{{ $similarProduct->name }}">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{ $similarProduct->name }}</h5>
+                                            <p class="card-text">{{ $similarProduct->description }}</p>
+                                            <p class="text-success"><strong>{{ number_format($similarProduct->price, 0, ',', ' ') }} Ft</strong></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <hr>
     </div>
 </div>
-
-
-@if(Auth::check())
-    <form id="review-form" action="{{ route('reviews.add', $product->id) }}" method="POST">
-        @csrf
-
-        <div>
-            <label for="rating">Értékelés (1-5):</label>
-            <input type="number" id="rating" name="rating" min="1" max="5" required>
-        </div>
-
-
-        <div>
-            <label for="review">Vélemény:</label>
-            <textarea id="review" name="review" rows="4" cols="50"></textarea>
-        </div>
-
-
-        <div>
-            <button type="submit">Értékelés küldése</button>
-        </div>
-    </form>
-@else
-
-    <button id="login-btn">Login to leave a review</button>
-@endif
-
-
-<div id="login-modal" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.8); padding: 20px; border-radius: 8px; color: white; z-index: 1000;">
-    <h3>You need to be logged in to submit a review.</h3>
-    <a href="{{ route('login') }}" style="color: #ff9800;">Click here to login</a>
-    <button onclick="closeModal()">Close</button>
 </div>
 
 
-<div id="overlay" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 999;"></div>
 
 <script>
-
-    document.getElementById('review-form')?.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-
-        if (!{{ Auth::check() ? 'true' : 'false' }}) {
-            showModal(); 
-        } else {
-            this.submit(); 
-        }
+    document.getElementById('login-btn')?.addEventListener('click', function() {
+        showModal();
     });
 
     function showModal() {
@@ -113,9 +180,6 @@
     }
 </script>
 
-<div style="height:300px">
-
-</div>
 
 
 

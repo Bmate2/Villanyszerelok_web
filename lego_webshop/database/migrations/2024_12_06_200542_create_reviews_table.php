@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained('products')->onDelete('cascade'); // Hozzáadja a kapcsolatot a products táblával
-            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Ha felhasználókat is kezelsz
-            $table->integer('rating'); // Az értékelés (1-5)
-            $table->text('review')->nullable(); // A szöveges értékelés
+            $table->foreignId('product_id')->constrained('products')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->integer('rating');
+            $table->text('review')->nullable();
             $table->timestamps();
         });
     }

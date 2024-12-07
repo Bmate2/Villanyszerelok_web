@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
 use App\Models\Product;
 
 class ProductSeeder extends Seeder
@@ -13,7 +15,10 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        Product::truncate();
+        \App\Models\Review::truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         Product::create([
             'name' => 'Lego Star Wars X-Wing Fighter',
@@ -65,6 +70,7 @@ class ProductSeeder extends Seeder
             'description' => 'A Ninjago templom, amely a fény erejét szimbolizálja.',
             'stock' => 18,
             'price' => 8499.99,
+            'category' => 'LEGO Ninjago',
             'image_url' => 'https://example.com/lego-ninjago-temple.jpg',
             'sales_count' => 90
         ]);
@@ -74,7 +80,7 @@ class ProductSeeder extends Seeder
             'description' => 'A Lego City tűzoltóállomás szett, a tűzoltás hőseivel.',
             'stock' => 40,
             'price' => 3999.99,
-            'image_url' => 'https://example.com/lego-city-fire-station.jpg',
+            'image_url' => '/images/legobg2.jpg',
             'sales_count' => 220
         ]);
 
@@ -83,6 +89,7 @@ class ProductSeeder extends Seeder
             'description' => 'A Lego Super Heroes szett a híres Batcave-t, Batman otthonát tartalmazza.',
             'stock' => 12,
             'price' => 9999.99,
+            'category' => "LEGO Super Heroes",
             'image_url' => 'https://example.com/lego-batcave.jpg',
             'sales_count' => 60
         ]);
@@ -181,6 +188,7 @@ class ProductSeeder extends Seeder
             'description' => 'A Marvel szuperhősök központja a Lego Avengers Tower-ben.',
             'stock' => 50,
             'price' => 10999.99,
+            'category' => "LEGO Super Heroes",
             'image_url' => 'https://example.com/lego-avengers-tower.jpg',
             'sales_count' => 180
         ]);

@@ -17,8 +17,19 @@ return new class extends Migration
             $table->text('description');
             $table->integer('stock');
             $table->decimal('price', 10, 2);
+            $table->enum('category', [
+                'LEGO City', 
+                'LEGO Technic', 
+                'LEGO Star Wars', 
+                'LEGO Ninjago', 
+                'LEGO Friends', 
+                'LEGO Creator', 
+                'LEGO Super Heroes', 
+                'LEGO Art',
+                'Other'
+            ])->default('Other');
             $table->string('image_url')->nullable();
-            $table->integer('sales_count');
+            $table->integer('sales_count')->default(0);
             $table->integer('rating_count')->default(0)->nullable();
             $table->decimal('rating_avg', 3, 2)->default(0)->nullable();
             $table->timestamps();

@@ -5,13 +5,23 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Review;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
     public function show($id)
     {
         $product = Product::findOrFail($id);
-        return view('show', compact('product'));
+
+        $similarProducts = Product::where('category', $product->category)
+                              ->orderBy('sales_count', 'desc')
+                              ->where('id', '!=', $product->id)
+                              ->get();
+
+
+        $images = $product->images;
+
+        return view('show', compact('product', 'similarProducts', 'images'));
     }
 
     public function productadd(Request $request): RedirectResponse{
@@ -37,6 +47,16 @@ class ProductController extends Controller
 
         $product = Product::findOrFail($productId);
 
+        $existingReview = Review::where('product_id', $productId)
+        ->where('user_id', Auth::id())
+        ->first();
+
+        if ($existingReview) {
+        return redirect()->route('product.show', $productId)
+            ->with('error', 'Már értékelted ezt a terméket!');
+        }
+
+
         $validated = $request->validate([
             'rating' => 'required|integer|between:1,5', 
             'review' => 'nullable|string|max:1000', 
@@ -56,4 +76,6 @@ class ProductController extends Controller
 
         return redirect()->route('product.show', $productId)->with('success', 'Értékelés sikeresen hozzáadva!');
     }
+
+
 }
