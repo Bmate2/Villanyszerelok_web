@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\Product;
-
+use App\Models\Review;
 class ProductSeeder extends Seeder
 {
     /**
@@ -16,6 +16,7 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        Review::truncate();
         Product::truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
@@ -133,7 +134,7 @@ class ProductSeeder extends Seeder
             'stock' => 35,
             'price' => 5999.99,
             'image_url' => '/images/legobg4.jpg',
-            'sales_count' => 200
+            'sales_count' => 0
         ]);
 
         Product::create([

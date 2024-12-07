@@ -78,7 +78,7 @@ h1 {
 }
 
 .gallery-image:hover {
-    border-color: orange; /* Highlight on hover */
+    border-color: orange;
 }
 
 .image-box {
@@ -112,10 +112,9 @@ h1 {
     padding: 20px;
 }
 .price p{
-    padding-bottom: 5px;
     position: absolute;
-    left: -15px;
- 
+    left: 0px;
+    bottom: 25px;
     font-size: 6mm;
 }
 .description-box {
@@ -128,8 +127,14 @@ h1 {
     width: 30%;
 
 }
-
-.actions-box p
+.description
+{
+    text-align: left;
+    font-size: 5mm;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.info
 {
     position: relative;
     bottom: 0;
@@ -145,7 +150,13 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
 
 }
-
+.infos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    bottom: 70px;
+    padding: 20px;
+}
 .btn-cart{
     position: absolute;
     right: 40px;
@@ -188,7 +199,10 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+.desc
+{
+    height: 60%;
+}
 
 .review-container {
     max-width: 100%;
@@ -225,7 +239,7 @@ h1 {
 }
 
 .btn-submit {
-    background-color: #28a745;
+    background-color: orange;
     color: white;
 }
 
@@ -252,7 +266,7 @@ h1 {
 }
 
 .btn-submit:hover {
-    background-color: #28a745;
+    background-color: orange;
     opacity: 0.9;
     border: 1px solid #333;
 }
@@ -375,4 +389,8 @@ h1 {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.empty{
+    font-size: 5mm;
 }

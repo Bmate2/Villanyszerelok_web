@@ -17,10 +17,9 @@ class DatabaseSeeder extends Seeder
         $this->call(ReviewSeeder::class);
 
         Product::all()->each(function ($product) {
-            $averageRating = $product->reviews()->avg('rating'); // Átlagos értékelés
-            $ratingCount = $product->reviews()->count(); // Értékelések száma
+            $averageRating = $product->reviews()->avg('rating');
+            $ratingCount = $product->reviews()->count();
             
-            // Frissítjük a terméket az új értékelésekkel
             $product->update([
                 'rating_avg' => $averageRating,
                 'rating_count' => $ratingCount,
