@@ -33,35 +33,74 @@
         <div class="inner-container">
             <div class="left-side">
                 <div class="gallery-box">
-
-                     
+                    <img src="{{ $product->image_url ?? '/images/placeholder.jpg' }}" alt="Gallery Image" class="gallery-image" onclick="setMainImage('{{  $product->image_url ?? '/images/placeholder.jpg'  }}')">
+                    <img src="{{ '/images/product_images/product1.jpg' }}" alt="Gallery Image" class="gallery-image" onclick="setMainImage('{{ '/images/product_images/product1.jpg' }}')">
+                    <img src="{{ '/images/product_images/product2.jpg' }}" alt="Gallery Image" class="gallery-image" onclick="setMainImage('{{ '/images/product_images/product2.jpg' }}')">
+                    <img src="{{ '/images/product_images/product3.jpg' }}" alt="Gallery Image" class="gallery-image" onclick="setMainImage('{{ '/images/product_images/product3.jpg' }}')">
                 </div>
                 <div class="image-box">
-                    <img src="{{ $product->image_url ?? '/images/placeholder.jpg' }}" class="current-image" alt="{{ $product->name }}">
+                    <img src="{{ $product->image_url ?? '/images/placeholder.jpg' }}" id="mainImage" class="current-image" alt="{{ $product->name }}">
                 </div>
-                <div class="actions-box">                   
-                        @if($product->category == 'Other')
-                            <p>Kategória: Egyéb</p>
-                        @else
-                            <p>Kategória: {{ $product->category }}</p>
-                        @endif
-                        @if($product->stock != 0)
-                            <p>Raktáron</p>
-                        @else
-                            <p>Elfogyott</p>
-                        @endif
-                        <p class="price">Ár: {{ $product->price }}FT</p>
-                        <a class="btn-cart">Kosárba</a>
+                <div class="actions-box">
+                        <div class="desc">                
+                            <h5>Leírás:</h5>
+                            <p class="description">{{ $product->description }}</p>
+                        </div>   
+
+                        <div class="infos">
+                            @if($product->category == 'Other')
+                                <p class="info">Kategória: Egyéb</p>
+                            @else
+                                <p class="info">Kategória: {{ $product->category }}</p>
+                            @endif
+                            @if($product->stock != 0)
+                                <p class="info">Raktáron</p>
+                            @else
+                                <p class="info">Elfogyott</p>
+                            @endif
+                        </div>
+                        <div class="price">
+                            <p class="info">Ár: {{ $product->price }}FT</p>
+                            <a class="btn-cart">Kosárba</a>
+                        </div>
                 </div>
             </div>
 
             <div class="right-side">
                 <div class="description-box">
-                    <p>{{ $product->description }}</p>
+                    <div class="best-review">
+                        @if($bestReview)
+
+                            <p><strong>{{ $bestReview->user->name }}</strong> értékelése:</p>
+                            
+                            <p>Értékelés: 
+                            @for ($i = 0; $i < 5; $i++)
+                                @if ($i < $bestReview->rating)
+                                    <span>⭐</span>
+                                @else
+                                    <span class="empty">☆</span>
+                                @endif
+                                @endfor
+                            </p>
+                            <p>{{ $bestReview->review }}</p>
+                            <p><em>Értékelés dátuma: {{ $bestReview->created_at->format('Y-m-d') }}</em></p>
+                        @else
+                            <p>Nincs még értékelés a termékről.</p>
+                        @endif
+                    </div>
                 </div>
                 
                 <div class="reviews-box">
-                    <p>Értékelés: {{ $product->rating_avg }} ({{ $product->rating_count }} értékelés)</p>
+                    <p>Értékelés:
+                                @for ($i = 0; $i < 5; $i++)
+                                @if ($i < $product->rating_avg)
+                                    <span>⭐</span>
+                                @else
+                                    <span class="empty">☆</span>
+                                @endif
+                                @endfor
+                            </p>
+                    <p>({{ $product->rating_count }} értékelés)</p>
                     <div class="review-container">
                         @if(Auth::check())
                             <form id="review-form" action="{{ route('reviews.add', $product->id) }}" method="POST" class="review-form">
@@ -164,6 +203,7 @@
 
 
 
+
 <script>
     document.getElementById('login-btn')?.addEventListener('click', function() {
         showModal();
@@ -178,6 +218,9 @@
         document.getElementById('login-modal').style.display = 'none';
         document.getElementById('overlay').style.display = 'none';
     }
+    function setMainImage(imageUrl) {
+    document.getElementById('mainImage').src = imageUrl;
+}
 </script>
 
 

@@ -17,11 +17,13 @@ class ProductController extends Controller
                               ->orderBy('sales_count', 'desc')
                               ->where('id', '!=', $product->id)
                               ->get();
+        
+        $bestReview = $product->reviews()
+                              ->orderBy('rating', 'desc')
+                              ->latest() 
+                              ->first();
 
-
-        $images = $product->images;
-
-        return view('show', compact('product', 'similarProducts', 'images'));
+        return view('show', compact('product', 'similarProducts', 'bestReview'));
     }
 
     public function productadd(Request $request): RedirectResponse{
