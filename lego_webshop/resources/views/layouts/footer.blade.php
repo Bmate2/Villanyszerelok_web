@@ -5,6 +5,7 @@
     <div class="container">
         <div class="row">
                 <p>&copy; 2024 Lego Webshop. Minden jog fenntartva.</p>
+
                 <ul class="list-inline">
                     <li class="list-inline-item">
                     <p>Lépj velünk kapcsolatba: </p>

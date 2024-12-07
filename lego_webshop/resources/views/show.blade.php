@@ -33,11 +33,13 @@
         <div class="inner-container">
             <div class="left-side">
                 <div class="gallery-box">
-
-                     
+                    <img src="{{ $product->image_url ?? '/images/placeholder.jpg' }}" alt="Gallery Image" class="gallery-image" onclick="setMainImage('{{  $product->image_url ?? '/images/placeholder.jpg'  }}')">
+                    <img src="{{ '/images/product_images/product1.jpg' }}" alt="Gallery Image" class="gallery-image" onclick="setMainImage('{{ '/images/product_images/product1.jpg' }}')">
+                    <img src="{{ '/images/product_images/product2.jpg' }}" alt="Gallery Image" class="gallery-image" onclick="setMainImage('{{ '/images/product_images/product2.jpg' }}')">
+                    <img src="{{ '/images/product_images/product3.jpg' }}" alt="Gallery Image" class="gallery-image" onclick="setMainImage('{{ '/images/product_images/product3.jpg' }}')">
                 </div>
                 <div class="image-box">
-                    <img src="{{ $product->image_url ?? '/images/placeholder.jpg' }}" class="current-image" alt="{{ $product->name }}">
+                    <img src="{{ $product->image_url ?? '/images/placeholder.jpg' }}" id="mainImage" class="current-image" alt="{{ $product->name }}">
                 </div>
                 <div class="actions-box">                   
                         @if($product->category == 'Other')
@@ -50,8 +52,10 @@
                         @else
                             <p>Elfogyott</p>
                         @endif
-                        <p class="price">Ár: {{ $product->price }}FT</p>
-                        <a class="btn-cart">Kosárba</a>
+                        <div class="price">
+                            <p>Ár: {{ $product->price }}FT</p>
+                            <a class="btn-cart">Kosárba</a>
+                        </div>
                 </div>
             </div>
 
@@ -178,6 +182,9 @@
         document.getElementById('login-modal').style.display = 'none';
         document.getElementById('overlay').style.display = 'none';
     }
+    function setMainImage(imageUrl) {
+    document.getElementById('mainImage').src = imageUrl;
+}
 </script>
 
 

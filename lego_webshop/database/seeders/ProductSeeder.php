@@ -17,7 +17,6 @@ class ProductSeeder extends Seeder
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         Product::truncate();
-        \App\Models\Review::truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         Product::create([
@@ -72,7 +71,7 @@ class ProductSeeder extends Seeder
         Product::create([
             'name' => 'Lego City Fire Station',
             'description' => 'A Lego City tűzoltóállomás szett, a tűzoltás hőseivel.',
-            'stock' => 40,
+            'stock' => 0,
             'price' => 3999.99,
             'image_url' => '/images/legobg2.jpg',
             'sales_count' => 220
