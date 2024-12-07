@@ -25,7 +25,6 @@ class ProductSeeder extends Seeder
             'description' => 'A galaktikus csata új dimenziója. Az X-Wing Fighter szett a Star Wars világából.',
             'stock' => 25,
             'price' => 7999.99,
-            'image_url' => 'https://example.com/lego-starwars-xwing.jpg',
             'sales_count' => 100
         ]);
 
@@ -34,7 +33,6 @@ class ProductSeeder extends Seeder
             'description' => 'A Millennium Falcon a galaxis leghíresebb űrhajója.',
             'stock' => 15,
             'price' => 14999.99,
-            'image_url' => 'https://example.com/lego-millennium-falcon.jpg',
             'sales_count' => 80
         ]);
 
@@ -43,7 +41,6 @@ class ProductSeeder extends Seeder
             'description' => 'A Lego Technic sorozat csúcsmodellje a Bugatti Chiron sportautó.',
             'stock' => 30,
             'price' => 10999.99,
-            'image_url' => 'https://example.com/lego-bugatti-chiron.jpg',
             'sales_count' => 120
         ]);
 
@@ -52,7 +49,6 @@ class ProductSeeder extends Seeder
             'description' => 'A Creator sorozatból egy három az egyben kalózhajó.',
             'stock' => 50,
             'price' => 4999.99,
-            'image_url' => 'https://example.com/lego-pirate-ship.jpg',
             'sales_count' => 150
         ]);
 
@@ -61,7 +57,6 @@ class ProductSeeder extends Seeder
             'description' => 'A Lego Friends szett segítségével építsd meg a Heartlake város üdülőhelyét.',
             'stock' => 20,
             'price' => 6999.99,
-            'image_url' => 'https://example.com/lego-heartlake-resort.jpg',
             'sales_count' => 200
         ]);
 
@@ -71,7 +66,6 @@ class ProductSeeder extends Seeder
             'stock' => 18,
             'price' => 8499.99,
             'category' => 'LEGO Ninjago',
-            'image_url' => 'https://example.com/lego-ninjago-temple.jpg',
             'sales_count' => 90
         ]);
 
@@ -90,7 +84,7 @@ class ProductSeeder extends Seeder
             'stock' => 12,
             'price' => 9999.99,
             'category' => "LEGO Super Heroes",
-            'image_url' => 'https://example.com/lego-batcave.jpg',
+            'image_url' => '/images/legobg1.jpg',
             'sales_count' => 60
         ]);
 
@@ -99,7 +93,6 @@ class ProductSeeder extends Seeder
             'description' => 'A híres Eiffel torony Lego változata a Lego Architecture sorozatból.',
             'stock' => 30,
             'price' => 5999.99,
-            'image_url' => 'https://example.com/lego-eiffel-tower.jpg',
             'sales_count' => 110
         ]);
 
@@ -116,7 +109,6 @@ class ProductSeeder extends Seeder
             'description' => 'Készítsd el a dzsungelt és az ottani állatokat a Creator szettel.',
             'stock' => 50,
             'price' => 4999.99,
-            'image_url' => 'https://example.com/lego-safari-jungle.jpg',
             'sales_count' => 140
         ]);
 
@@ -125,7 +117,6 @@ class ProductSeeder extends Seeder
             'description' => 'A Star Wars világában a legikonikusabb űrállomás, a Halálcsillag Lego változata.',
             'stock' => 10,
             'price' => 24999.99,
-            'image_url' => 'https://example.com/lego-death-star.jpg',
             'sales_count' => 50
         ]);
 
@@ -134,7 +125,6 @@ class ProductSeeder extends Seeder
             'description' => 'A Lego Technic sorozat egyik legexkluzívabb autója, a Lamborghini Sián.',
             'stock' => 20,
             'price' => 14999.99,
-            'image_url' => 'https://example.com/lego-lamborghini-sian.jpg',
             'sales_count' => 80
         ]);
 
@@ -143,7 +133,7 @@ class ProductSeeder extends Seeder
             'description' => 'Zane és a Titan Mech harcol a Ninjago világában.',
             'stock' => 35,
             'price' => 5999.99,
-            'image_url' => 'https://example.com/lego-zane-titan-mech.jpg',
+            'image_url' => '/images/legobg4.jpg',
             'sales_count' => 200
         ]);
 
@@ -152,7 +142,6 @@ class ProductSeeder extends Seeder
             'description' => 'A Lego Friends szett egy vidámpark hullámvasúttal.',
             'stock' => 15,
             'price' => 8999.99,
-            'image_url' => 'https://example.com/lego-amusement-park.jpg',
             'sales_count' => 70
         ]);
 
@@ -161,7 +150,7 @@ class ProductSeeder extends Seeder
             'description' => 'A Lego City rendőrség szett segít a rendfenntartásban.',
             'stock' => 25,
             'price' => 4499.99,
-            'image_url' => 'https://example.com/lego-police-station.jpg',
+            'image_url' => '/images/legobg5.jpg',
             'sales_count' => 100
         ]);
 
@@ -170,7 +159,6 @@ class ProductSeeder extends Seeder
             'description' => 'A Disney hercegnők kastélya Lego formájában.',
             'stock' => 40,
             'price' => 12999.99,
-            'image_url' => 'https://example.com/lego-disney-castle.jpg',
             'sales_count' => 120
         ]);
 
@@ -179,7 +167,6 @@ class ProductSeeder extends Seeder
             'description' => 'A Lego Ideas szett, ami a híres NASA Apollo Saturn V rakétát örökíti meg.',
             'stock' => 30,
             'price' => 7999.99,
-            'image_url' => 'https://example.com/lego-nasa-apollo-saturn.jpg',
             'sales_count' => 150
         ]);
 
@@ -189,7 +176,6 @@ class ProductSeeder extends Seeder
             'stock' => 50,
             'price' => 10999.99,
             'category' => "LEGO Super Heroes",
-            'image_url' => 'https://example.com/lego-avengers-tower.jpg',
             'sales_count' => 180
         ]);
 
