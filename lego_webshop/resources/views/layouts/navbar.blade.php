@@ -31,12 +31,20 @@
       </ul>
       <div class="container-fluid">
     <div class="d-flex justify-content-end align-items-center">
+
+    @if ($totalCount > 0)
+    <a href="{{ route('cart.show') }}" class="nav-link active" style="margin-right:30px;"> 🛒 Kosár({{ $totalCount }})</a>
+@else
+    <a href="{{ route('cart.show') }}" class="nav-link active" style="margin-right:30px;"> 🛒 Kosár</a>
+@endif
+
+
         @auth
             <div class="d-flex align-items-center">
                 @if(auth()->user()->isAdmin())
                     <a class="nav-link" href="{{ route('admin.dashboard') }}">Admin Felület</a>
                 @endif
-                
+              
                 <div class="dropdown">
                   <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <img class="rounded-4 img-fluid" src="https://miro.medium.com/v2/resize:fit:1000/0*qS3X0bzoxuD03Vr-.jpg" alt="Avatar" style="max-width: 75px; max-height: 75px;margin:10px">
