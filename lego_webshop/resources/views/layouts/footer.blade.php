@@ -1,10 +1,11 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
+<div style="height: 35%;"></div>
 <footer class="py-4 mt-5">
 <img src="/images/logo.png">
     <div class="container">
         <div class="row">
                 <p>&copy; 2024 Lego Webshop. Minden jog fenntartva.</p>
+
                 <ul class="list-inline">
                     <li class="list-inline-item">
                     <p>Lépj velünk kapcsolatba: </p>

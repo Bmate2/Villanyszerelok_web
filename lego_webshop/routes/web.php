@@ -4,7 +4,9 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +50,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/login', [ProfileController::class, 'loginCheck'])->name('loginPage');
 
+Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/admindashboard', [AdminController::class, 'index'])->name('admin.dashboard');
@@ -57,4 +60,13 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::delete('/admindashboard/{id}', [AdminController::class, 'delete'])->name('admin.product.delete');
 });
 
+Route::post('/product/{productId}/reviews', [ProductController::class, 'addReview'])->name('reviews.add');
+
 require __DIR__.'/auth.php';
+
+
+Route::get('/cart', [CartController::class, 'show'])->name('cart.show');
+Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
+Route::post('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
+Route::post('/cart/update/{product_id}/{action}', [CartController::class, 'update'])->name('cart.update');
+Route::post('/cart/remove/{product_id}', [CartController::class, 'remove'])->name('cart.remove');
