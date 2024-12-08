@@ -48,9 +48,13 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/login', [ProfileController::class, 'loginCheck'])->name('loginPage');
 
+
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/admindashboard', [AdminController::class, 'index'])->name('admin.dashboard');
-    Route::get('/productadd', [AdminController::class, 'productadd'])->name('admin.productadd');
+    Route::get('/productadd', [AdminController::class, 'create'])->name('admin.product.add');
+    Route::post('/productadd', [AdminController::class, 'store'])->name('admin.product.store');
+    Route::patch('/admindashboard/{id}', [AdminController::class, 'update'])->name('admin.product.update');
+    Route::delete('/admindashboard/{id}', [AdminController::class, 'delete'])->name('admin.product.delete');
 });
 
 require __DIR__.'/auth.php';

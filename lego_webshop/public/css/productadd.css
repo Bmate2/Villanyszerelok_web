@@ -1,0 +1,67 @@
+.mezo{
+    display: block;
+    margin-top: 0.25rem;
+    border-width: 4px;
+    border-color: #fbbf24;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-weight: 700;
+}
+
+.mezo:focus {
+    box-shadow: 0 0 0 2px #f59e0b;
+    outline: none;
+}
+
+#gomb{
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-width: 4px;
+    border-color: #f59e0b;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#gomb:hover {
+    background-color: #f59e0b;
+    transform: scale(1.05);
+}
+
+#gomb:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #fbbf24, 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.relative-container {
+    position: relative;
+    margin-top: 1rem; 
+}
+
+.center-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.product-container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
