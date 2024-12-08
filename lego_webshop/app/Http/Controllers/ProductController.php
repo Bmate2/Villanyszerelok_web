@@ -79,5 +79,4 @@ class ProductController extends Controller
         return redirect()->route('product.show', $productId)->with('success', 'Értékelés sikeresen hozzáadva!');
     }
 
-
 }
