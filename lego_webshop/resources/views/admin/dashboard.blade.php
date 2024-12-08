@@ -76,17 +76,17 @@
                 
                             <!-- Back oldal -->
                             <div class="flip-card-back">
+                                <div class="icons">
+                                    <box-icon name="dots-horizontal-rounded" onClick="flipCard(this)"></box-icon>
+                                    <form method="POST" action="{{route('admin.product.delete', ['id' => $products[$i]->id])}}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" style="all: unset;"><box-icon name="trash" class="text-danger"></box-icon></button>
+                                    </form>
+                                </div>
                                 <form method="POST" action="{{ route('admin.product.update', ['id' => $products[$i]->id])}}">
                                     @csrf
                                     @method('PATCH')
-                                    <div class="icons">
-                                        <box-icon name="dots-horizontal-rounded" onClick="flipCard(this)"></box-icon>
-                                        <form method="POST" action="{{route('admin.product.delete', ['id' => $products[$i]->id])}}">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" style="all: unset;"><box-icon name="trash" class="text-danger"></box-icon></button>
-                                        </form>
-                                    </div>
                                     <div class="info">
                                         <table>
                                             <tr>
