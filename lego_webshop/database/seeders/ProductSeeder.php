@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\Product;
-use App\Models\Review;
+
 class ProductSeeder extends Seeder
 {
     /**
@@ -16,8 +16,8 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-        Review::truncate();
         Product::truncate();
+        \App\Models\Review::truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         Product::create([
@@ -72,7 +72,7 @@ class ProductSeeder extends Seeder
         Product::create([
             'name' => 'Lego City Fire Station',
             'description' => 'A Lego City tűzoltóállomás szett, a tűzoltás hőseivel.',
-            'stock' => 0,
+            'stock' => 40,
             'price' => 3999.99,
             'image_url' => '/images/legobg2.jpg',
             'sales_count' => 220
@@ -131,10 +131,10 @@ class ProductSeeder extends Seeder
         Product::create([
             'name' => 'Lego Ninjago Zane’s Titan Mech',
             'description' => 'Zane és a Titan Mech harcol a Ninjago világában.',
-            'stock' => 35,
+            'stock' => 0,
             'price' => 5999.99,
             'image_url' => '/images/legobg4.jpg',
-            'sales_count' => 0
+            'sales_count' => 200
         ]);
 
         Product::create([

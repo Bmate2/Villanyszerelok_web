@@ -61,7 +61,8 @@
                         </div>
                         <div class="price">
                             <p class="info">Ár: {{ $product->price }}FT</p>
-                            <a class="btn-cart">Kosárba</a>
+                            <a class="btn-cart" onclick="addToCart({{ $product->id }}, '{{ $product->name }}', {{ $product->price }}, 1)">Kosárba</a>
+                            
                         </div>
                 </div>
             </div>
@@ -93,13 +94,12 @@
                 <div class="reviews-box">
                     <p>Értékelés:
                                 @for ($i = 0; $i < 5; $i++)
-                                @if ($i < $product->rating_avg)
+                                @if ($i + 0.5 <= $product->rating_avg)
                                     <span>⭐</span>
                                 @else
                                     <span class="empty">☆</span>
                                 @endif
                                 @endfor
-                            </p>
                     <p>({{ $product->rating_count }} értékelés)</p>
                     <div class="review-container">
                         @if(Auth::check())
@@ -223,6 +223,32 @@
 }
 </script>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    function addToCart(productId, productName, productPrice, quantity) {
+        $.ajax({
+            url: "{{ route('cart.add') }}",
+            method: 'POST',
+            data: {
+                _token: "{{ csrf_token() }}",
+                product_id: productId,
+                product_name: productName,
+                product_price: productPrice,
+                quantity: quantity
+            },
+            success: function(response) {
+
+                alert("A termék sikeresen hozzáadva a kosárhoz!");
+
+            },
+            error: function(xhr, status, error) {
+
+                alert("Hiba történt a kosárba tétel közben.");
+            }
+        });
+    }
+</script>
 
 
 
