@@ -1,0 +1,55 @@
+body {
+    position: relative;
+    height: 60vh;
+    color: #333;
+    background-size: cover;
+    background-position: center center;
+
+}
+.to-fill{
+    font-size: 13px;
+    color: gray;
+}
+.data-container{
+    max-width: 1000px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.form-control {
+    border: 1px solid grey;
+}
+.form-select {
+    border: 1px solid grey;
+}
+.table
+{
+    border: 1px solid gray;
+    text-align: center;
+}
+table td:first-child, table th:first-child {
+    text-align: left;
+}
+
+.order-btn{
+    background-color: rgb(255, 39, 39);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-decoration: none;
+}
+.order-btn:hover{
+    background-color: rgba(255, 39, 39, 0.89);
+}
+.cart-bottom{
+    display: flex;
+
+    justify-content: space-between;
+}

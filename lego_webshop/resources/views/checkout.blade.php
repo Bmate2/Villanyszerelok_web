@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lego-Webshop - Checkout</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('/css/checkout.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/footer.css') }}">
 </head>
 <body>
 
 @include('layouts.navbar')
-
-<div class="container my-5">
+<div>
+<div class="data-container my-5">
     <h2>Rendelés leadása</h2>
 
 
@@ -76,11 +77,16 @@
             <option value="cash_on_delivery">Készpénzes fizetés utánvétellel</option>
         </select>
     </div>
-
-    <button type="submit" class="btn btn-primary">Rendelés leadása</button>
+    <div class="cart-bottom">
+        <a href="{{ route('cart.show') }}" class="order-btn btn-secondary">Vissza a kosárhoz</a>
+        <button type="submit" class="order-btn">Rendelés leadása</button>
+    </div>
+    
 </form>
 </div>
+</div>
 
+<div style="height: 30%"></div>
 @include('layouts.footer')
 
 </body>
