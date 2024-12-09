@@ -7,6 +7,9 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\OrderController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -70,3 +73,9 @@ Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
 Route::post('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
 Route::post('/cart/update/{product_id}/{action}', [CartController::class, 'update'])->name('cart.update');
 Route::post('/cart/remove/{product_id}', [CartController::class, 'remove'])->name('cart.remove');
+
+Route::get('/cart/checkout', [CheckoutController::class, 'index'])->name('checkout');
+Route::post('/cart/checkout/store', [CheckoutController::class, 'store'])->name('checkout.store');
+Route::post('/order', [OrderController::class, 'store'])->name('order.store');
+
+

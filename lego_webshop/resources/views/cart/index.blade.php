@@ -60,10 +60,13 @@
             <hr>
             <div class="cart-bottom">
                 <form action="{{ route('cart.clear') }}" method="POST">
-                @csrf
+                    @csrf
                     <button type="submit" class="idkman">Kosár ürítése</but>
                 </form>
-                <a href="{{ route('aruk') }}"><button type="submit" class="empty-cart-btn">Tovább a rendeléshez</button></a>
+                <form action="{{ route('checkout') }}" method="GET">
+                    @csrf
+                    <button type="submit" class="empty-cart-btn">Tovább a rendeléshez</button>
+                </form>
             </div>
             @else
                 <p class="cart-text">Üres a kosár</p>
