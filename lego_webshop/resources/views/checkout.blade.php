@@ -20,21 +20,30 @@
 
     <h4>Szállítási információk</h4>
     <div class="mb-3">
-        <label for="name" class="form-label">Név</label>
-        <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" required>
+        <label for="customer_name" class="form-label">*Név</label>
+        <input type="text" class="form-control" id="customer_name" name="customer_name" value="{{ old('customer_name') }}" required>
     </div>
 
     <div class="mb-3">
-        <label for="address" class="form-label">Szállítási cím</label>
-        <input type="text" class="form-control" id="address" name="address" value="{{ old('address') }}" required>
+        <label for="shipping_address" class="form-label">*Szállítási cím</label>
+        <input type="text" class="form-control" id="shipping_address" name="shipping_address" value="{{ old('shipping_address') }}" required>
     </div>
 
     <div class="mb-3">
-        <label for="email" class="form-label">Email cím</label>
-        <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" required>
+        <label for="billing_address" class="form-label">Számlázási cím</label>
+        <input type="text" class="form-control" id="billing_address" name="billing_address" value="{{ old('billing_address') }}">
     </div>
 
+    <div class="mb-3">
+        <label for="customer_email" class="form-label">*Email cím</label>
+        <input type="email" class="form-control" id="customer_email" name="customer_email" value="{{ old('customer_email') }}" required>
+    </div>
 
+    <div class="mb-3">
+        <label for="customer_phone" class="form-label">Telefon</label>
+        <input type="text" class="form-control" id="customer_phone" name="customer_phone" value="{{ old('customer_phone') }}">
+    </div>
+    <p class="to-fill">(A *-al jelölt mezők kitöltése kötelező)</p>
     <h4>Kosár összesítő</h4>
     <table class="table">
         <thead>

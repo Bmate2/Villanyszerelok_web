@@ -16,10 +16,11 @@ class Order extends Model
         'customer_phone',
         'shipping_address',
         'billing_address',
-        'payment_method',
         'cart_data',
         'total_price',
         'status',
+        'payment_method',
+        'user_id'
     ];
 
 

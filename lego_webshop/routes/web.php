@@ -76,6 +76,8 @@ Route::post('/cart/remove/{product_id}', [CartController::class, 'remove'])->nam
 
 Route::get('/cart/checkout', [CheckoutController::class, 'index'])->name('checkout');
 Route::post('/cart/checkout/store', [CheckoutController::class, 'store'])->name('checkout.store');
-Route::post('/order', [OrderController::class, 'store'])->name('order.store');
-
+Route::get('/order/success', [OrderController::class, 'success'])->name('order.success');
+Route::middleware('auth')->group(function () {
+    Route::post('order', [OrderController::class, 'store'])->name('order.store');
+});
 

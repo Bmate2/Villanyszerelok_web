@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Order;
 
 class CheckoutController extends Controller
 {
-
     public function index()
     {
         $cart = session()->get('cart', []);
@@ -18,7 +16,6 @@ class CheckoutController extends Controller
         return view('checkout', compact('cart', 'totalPrice'));
     }
 
-
     public function store(Request $request)
     {
         $cart = session()->get('cart', []);
@@ -26,23 +23,19 @@ class CheckoutController extends Controller
             return $item['price'] * $item['quantity'];
         }, $cart));
 
+        
 
-        $order = Order::create([
-            'cart_data' => json_encode($cart),
-            'total_price' => $totalPrice,      
-            'status' => 'pending',         
-            'customer_name' => $request->input('customer_name'),
-            'customer_email' => $request->input('customer_email'),
-            'customer_phone' => $request->input('customer_phone'),
-            'shipping_address' => $request->input('shipping_address'),
-            'billing_address' => $request->input('billing_address') ?? $request->input('shipping_address'),
-            'payment_method' => $request->input('payment_method')
+        $validatedData = $request->validate([
+            'customer_name' => 'required|string|max:255',
+            'customer_email' => 'required|email|max:255',
+            'customer_phone' => 'nullable|string|max:12',
+            'shipping_address' => 'required|string',
+            'billing_address' => 'nullable|string',
+            'payment_method' => 'required|string',
         ]);
 
-
-        session()->forget('cart');
-
-
-        return redirect()->route('order.success', ['order' => $order->id]);
+        
+        $orderController = new OrderController();
+        return $orderController->store($request, $cart, $totalPrice, $validatedData);
     }
 }
