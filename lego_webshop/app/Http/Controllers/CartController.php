@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 class CartController extends Controller
 {
 
-    // Kosár megjelenítése
     public function show()
     {
         $cart = session()->get('cart', []);
@@ -87,12 +86,12 @@ public function update($product_id, $action)
         return redirect()->route('cart.show');
     }
 
-    // Termék eltávolítása a kosárból
+
     public function remove($product_id)
     {
         $cart = session()->get('cart', []);
 
-        // Termék eltávolítása
+
         $cart = array_filter($cart, function ($item) use ($product_id) {
             return $item['id'] != $product_id;
         });
