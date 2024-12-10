@@ -22,3 +22,4 @@
 | 16 | Admin nézet mezei userként | Az admin nézet nem jelenik meg általános felhasználóként | Helyes működés | - |
 | 17 | Rendelés törlése admin felületből | A rendelést töröljük az adatbázisból | Helyes működés | - |
 | 18 | Rendelés státuszának módosítása admin felületből | A rendelést státuszát átállítjuk a kiválasztott opcióra | Helyes működés | - |
+| 19 | Admin felületről átirányítás termékhez | A termék kártyára kattintva az oldal átirányul a termék oldalára | Nem létező oldalra került átirányítás | Probléma megoldva, rosszul volt linkelve |

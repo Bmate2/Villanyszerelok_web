@@ -9,7 +9,7 @@
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     
-    <link rel="stylesheet" href="{{ asset('/css/footer.css') }}">
+
     <link rel="stylesheet" href="{{ asset('/css/product.css') }}">
 
     <script>
@@ -61,7 +61,7 @@
                                         <button type="submit" style="all: unset;"><box-icon name="trash" class="text-danger"></box-icon></button>
                                     </form>
                                 </div>
-                                <a href="http://localhost:8001/product/{{$i+1}}" class="card-link" style="text-decoration: none !important;">
+                                <a href="{{ route('product.show', ['id' => $products[$i]->id]) }}" class="card-link" style="text-decoration: none !important;">
                                     <div class="image-container">
                                         <img src="{{ $products[$i]->image_url ?? asset('/images/placeholder.jpg') }}" class="card-img-top" alt="{{ $products[$i]->name }}">
                                     </div>
@@ -139,7 +139,7 @@
         </div>
         </div>
     </div> 
-    @include('layouts.footer')
+
 </div> 
 </body>
 </html>
