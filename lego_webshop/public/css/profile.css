@@ -1,0 +1,56 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    
+    height: 100vh;
+}
+.profile-container{
+    display: flex;
+    gap: 20px;
+}
+
+.left {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    height: 20%;
+}
+
+.left-btn{
+    margin-bottom: 10px;
+    font-weight: bold;
+    border: 1px solid gray;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1.1rem;
+}
+h1{
+    font-weight: bold;
+}
+h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.table {
+    border: 1px solid gray;
+    text-align: center;
+    vertical-align: middle;
+
+}
+.table button{
+
+    font-weight: bold;
+    border: 1px solid gray;
+}

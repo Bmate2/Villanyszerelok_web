@@ -394,3 +394,18 @@ h1 {
 .empty{
     font-size: 5mm;
 }
+#cart-message {
+    opacity: 0.9;
+    background-color: rgb(255, 208, 0);
+    border-color: black;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    width: 450px;
+    display: none;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 15px;
+}

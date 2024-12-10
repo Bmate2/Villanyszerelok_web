@@ -27,7 +27,9 @@
                 {{ session('error') }}
             </div>
         @endif
-
+        <div id="cart-message" class="alert alert-success" style="display: none;">
+            <strong>A termék sikeresen hozzáadva a kosárhoz.</strong>
+        </div>
 
         <h1>{{ $product->name }}</h1>
         <div class="inner-container">
@@ -227,26 +229,30 @@
 
 <script>
     function addToCart(productId, productName, productPrice, quantity) {
-        $.ajax({
-            url: "{{ route('cart.add') }}",
-            method: 'POST',
-            data: {
-                _token: "{{ csrf_token() }}",
-                product_id: productId,
-                product_name: productName,
-                product_price: productPrice,
-                quantity: quantity
-            },
-            success: function(response) {
+    $.ajax({
+        url: "{{ route('cart.add') }}",
+        method: 'POST',
+        data: {
+            _token: "{{ csrf_token() }}",
+            product_id: productId,
+            product_name: productName,
+            product_price: productPrice,
+            quantity: quantity
+        },
+        success: function(response) {
+            // Sikeres válasz esetén jelenítsd meg az üzenetet
+            var cartMessage = document.getElementById('cart-message');
+            cartMessage.style.display = 'block';  // Üzenet megjelenítése
 
-                alert("A termék sikeresen hozzáadva a kosárhoz!");
-
-            },
-            error: function(xhr, status, error) {
-
-                alert("Hiba történt a kosárba tétel közben.");
-            }
-        });
+            // Üzenet eltüntetése 5 másodperc múlva
+            setTimeout(function() {
+                cartMessage.style.display = 'none';
+            }, 5000);  // 5 másodperc után eltűnik
+        },
+        error: function(xhr, status, error) {
+            alert("Hiba történt a kosárba tétel közben.");
+        }
+    });
     }
 </script>
 
