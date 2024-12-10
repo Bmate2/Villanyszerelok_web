@@ -14,3 +14,4 @@
 | 08 | Rendelésnél nem kötelező mező üresen hagyása | A kötelező mezőket kitöktve és a nem kötelező mezőket üresen hagyva a rendelés elmentődik az adatbázisba | Nem engedte elmenteni amíg nem töltöttük ki a mezőt | A probléma megolva |
 | 09 | Rendelés elmentése | A rendelés leadása gombra kattintva minden megadott adatot elmentünk az adatbázisba | A nem kötelező mezők nem kerültek mentésre | A probléma megolva |
 | 10 | Rendelés megjelenítése a profilon | Az profilon megjelennek az aktuális fiók által tett rendelések | Helyes működés | - |
+| 11 | Értékelés törlése | Az értékelésünket töröljük, ha szeretnénk írhatunk újat | Helyes működés | - |

@@ -9,16 +9,13 @@ use Illuminate\Support\Facades\Auth;
 class OrderController extends Controller
 {
     public function show($id)
-{
-    // Lekérjük a rendelést az azonosító alapján, és a kapcsolódó termékekkel
-    $order = Order::with('products')->findOrFail($id);
+    {
+        $order = Order::with('products')->findOrFail($id);
 
-    // A cart_data JSON dekódolása
-    $cartData = json_decode($order->cart_data, true);
+        $cartData = json_decode($order->cart_data, true);
 
-    // Visszaadjuk a rendelést és a cart_data-t a nézetnek
-    return view('orders.show', compact('order', 'cartData')); // Az order és cartData átadása
-}
+        return view('orders.show', compact('order', 'cartData')); 
+    }
     public function store(Request $request, $cart, $totalPrice, $validatedData)
     {
 
@@ -46,5 +43,18 @@ class OrderController extends Controller
 
         $order = Order::find($request->order);
         return view('order.success', compact('order'));
+    }
+
+    public function destroy($id)
+    {
+        $order = Order::findOrFail($id);
+        
+        if ($order->user_id !== auth()->id()) {
+            return redirect()->route('profile.show')->with('error', 'Nincs jogosultságod törölni ezt a rendelést.');
+        }
+        
+        $order->delete();
+
+        return redirect()->route('profile.show')->with('success', 'Rendelés sikeresen törölve!');
     }
 }

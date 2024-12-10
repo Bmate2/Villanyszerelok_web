@@ -33,18 +33,34 @@ class ProfileController extends Controller
     /**
      * Update the user's profile information.
      */
-    public function update(ProfileUpdateRequest $request): RedirectResponse
+    public function update(Request $request)
     {
-        $request->user()->fill($request->validated());
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255|unique:users,email,' . auth()->id(),
+        ]);
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
-        }
+        $user = auth()->user();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->save();
 
-        $request->user()->save();
-
-        return Redirect::route('profile.edit')->with('status', 'profile-updated');
+        return response()->json(['message' => 'Profil sikeresen frissítve!']);
     }
+
+    public function updatePassword(Request $request)
+    {
+        $request->validate([
+            'password' => 'required|string|min:8|confirmed',
+        ]);
+
+        $user = auth()->user();
+        $user->password = bcrypt($request->password);
+        $user->save();
+
+        return response()->json(['message' => 'Jelszó sikeresen frissítve!']);
+    }
+
 
     /**
      * Delete the user's account.

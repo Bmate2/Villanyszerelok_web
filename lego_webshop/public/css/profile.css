@@ -1,14 +1,27 @@
-/* Alap stílusok */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
     height: 100vh;
 }
+.profile-container{
+    display: flex;
+    gap: 20px;
+}
+
+
+
+
+
+
+
+
 
 .card {
+    margin-top: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 .card-body {
@@ -71,24 +84,14 @@ h2 {
     background-color: #f1f1f1;
 }
 
-.table .btn-info {
-    background-color: #17a2b8;
-    border-color: #17a2b8;
-}
 
-.table .btn-info:hover {
-    background-color: #138496;
-    border-color: #117a8b;
-}
-
-/* Rendelés termékek megjelenítése */
 td p {
     margin: 0;
     font-size: 0.9rem;
     color: #555;
 }
 
-/* Értékelések */
+
 h2 + table {
     margin-top: 40px;
 }
