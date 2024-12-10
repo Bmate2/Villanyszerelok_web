@@ -65,6 +65,10 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::post('/productadd', [AdminController::class, 'store'])->name('admin.product.store');
     Route::patch('/admindashboard/{id}', [AdminController::class, 'update'])->name('admin.product.update');
     Route::delete('/admindashboard/{id}', [AdminController::class, 'delete'])->name('admin.product.delete');
+    Route::get('/orders', [AdminController::class, 'orders'])->name('admin.orders');
+    Route::get('/orders/{id}', [AdminController::class, 'orderDetails'])->name('admin.order.details');
+    Route::post('/orders/{id}/update', [AdminController::class, 'updateOrderStatus'])->name('admin.order.update');
+    Route::delete('/orders/{id}', [AdminController::class, 'deleteOrder'])->name('admin.order.delete');
 });
 
 Route::post('/product/{productId}/reviews', [ProductController::class, 'addReview'])->name('reviews.add');

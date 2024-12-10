@@ -54,3 +54,11 @@ h2 {
     font-weight: bold;
     border: 1px solid gray;
 }
+.mo-btn{
+    background-color: orange;
+    border: 1px solid gray;
+}
+.mo-btn:hover{
+    background-color: rgba(218, 142, 2, 0.808);
+    border: 1px solid black;
+}

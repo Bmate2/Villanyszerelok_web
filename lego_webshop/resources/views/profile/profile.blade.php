@@ -53,7 +53,7 @@
                                         </div>
 
                                         <div class="flex items-center gap-4">
-                                            <button type="button" id="save-profile" class="btn btn-primary">Mentés</button>
+                                            <button type="button" id="save-profile" class="btn btn-primary mo-btn">Mentés</button>
                                         </div>
                                     </form>
                                 </div>
@@ -86,7 +86,7 @@
                                         </div>
 
                                         <div class="flex items-center gap-4">
-                                            <button type="button" id="save-password" class="btn btn-primary">Jelszó módosítása</button>
+                                            <button type="button" id="save-password" class="btn btn-primary mo-btn">Jelszó módosítása</button>
                                         </div>
                                     </form>
                                 </div>
@@ -172,7 +172,7 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Bezárás"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    Biztosan törölni szeretnéd ezt az értékelést? Ez a művelet nem visszavonható.
+                                                    Biztosan törölni szeretnéd ezt a rendelést? Ez a művelet nem visszavonható.
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
@@ -258,7 +258,7 @@
                                                         <label for="review{{ $review->id }}" class="form-label">Komment</label>
                                                         <textarea class="form-control" id="review{{ $review->id }}" name="review" rows="3">{{ $review->review }}</textarea>
                                                     </div>
-                                                    <button type="submit" class="btn btn-primary">Frissítés</button>
+                                                    <button type="submit" class="btn btn-primary mo-btn">Frissítés</button>
                                                 </form>
                                             </div>
                                         </div>

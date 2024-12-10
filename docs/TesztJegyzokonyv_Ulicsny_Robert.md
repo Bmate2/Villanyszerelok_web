@@ -15,3 +15,10 @@
 | 09 | Rendelés elmentése | A rendelés leadása gombra kattintva minden megadott adatot elmentünk az adatbázisba | A nem kötelező mezők nem kerültek mentésre | A probléma megolva |
 | 10 | Rendelés megjelenítése a profilon | Az profilon megjelennek az aktuális fiók által tett rendelések | Helyes működés | - |
 | 11 | Értékelés törlése | Az értékelésünket töröljük, ha szeretnénk írhatunk újat | Helyes működés | - |
+| 12 | Jelszó változtatás | A jelszót megváltoztatjuk a profilunkon, és a régi jelszó érvénytelenné válik, az újat kell használni | Helyes működés | - |
+| 13 | Név megváltoztatása | A nevünket megváltoztathatjuk a profilunkon, ezzel az adatbázisban is | Helyes működés | - |
+| 14 | Email megváltoztatása | Az email címünket megváltoztathatjuk a profilunkon, ezzel az adatbázisban is | Helyes működés | - |
+| 15 | Rendelések megjelenítése admin felületen | A rendelések megjelennek minden hozzájuk tartozó adattal | Az oldal összeomlott | A probléma javítva, nem volt létrehozva a kötés az order és a user között |
+| 16 | Admin nézet mezei userként | Az admin nézet nem jelenik meg általános felhasználóként | Helyes működés | - |
+| 17 | Rendelés törlése admin felületből | A rendelést töröljük az adatbázisból | Helyes működés | - |
+| 18 | Rendelés státuszának módosítása admin felületből | A rendelést státuszát átállítjuk a kiválasztott opcióra | Helyes működés | - |
