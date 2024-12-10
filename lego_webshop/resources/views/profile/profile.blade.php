@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lego-Webshop</title>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('/css/profile.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/footer.css') }}">
@@ -23,11 +24,11 @@
     @endif
 
     <div class="profile-container">
-            <div class="card mb-4">
+            <div class="left">
                 <div class="card-body">
                     <h5 class="card-title">{{ $user->name }}</h5>
-                    <p class="card-text">Email: {{ $user->email }}</p>
-                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editProfileModal{{ $user->id }}">Profil szerkesztése</button>
+                    <p class="card-text">Email: <br>{{ $user->email }}</p>
+                    <button class="btn btn-warning left-btn" data-bs-toggle="modal" data-bs-target="#editProfileModal{{ $user->id }}">Profil szerkesztése</button>
 
                     <div class="modal fade" id="editProfileModal{{ $user->id }}" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -60,7 +61,7 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#changePasswordModal{{ $user->id }}">Jelszó módosítása</button>
+                    <button class="btn btn-warning left-btn" data-bs-toggle="modal" data-bs-target="#changePasswordModal{{ $user->id }}">Jelszó módosítása</button>
 
                     <div class="modal fade" id="changePasswordModal{{ $user->id }}" tabindex="-1" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -92,7 +93,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteProfileModal">
+                    <button type="button" class="btn btn-danger left-btn" data-bs-toggle="modal" data-bs-target="#deleteProfileModal">
                         Profil törlése
                     </button>
 
@@ -131,11 +132,11 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>#</th>
+                                <th>Azonosító</th>
                                 <th>Rendelés dátuma</th>
+                                <th>Termékek</th>
                                 <th>Összeg</th>
-                                <th>Statusz</th>
-                                <th>Részletek</th>
+                                <th>Státusz</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -157,7 +158,7 @@
                                     </td>
                                 <td>{{ number_format($order->total_price, 0, ',', ' ') }} Ft</td>
                                 <td>{{ $order->status }}</td>
-                                <td>
+                                <td class="action">
                                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteOrderModal{{ $order->id }}">
                                         Rendelés törlése
                                     </button>
@@ -198,7 +199,7 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>Rendelés ID</th>
+                            <th>Értékelt termék</th>
                             <th>Értékelés</th>
                             <th>Komment</th>
                         </tr>
@@ -209,7 +210,7 @@
                                 <td>{{ $review->product->name }}</td>
                                 <td>{{ $review->rating }} / 5</td>
                                 <td>{{ $review->review }}</td>
-                                <td>
+                                <td class="action">
                                     <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editReviewModal{{ $review->id }}">Szerkesztés</button>
                                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteReviewModal{{ $review->id }}">
                                         Értékelés törlése
@@ -272,28 +273,6 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @include('layouts.footer')
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
@@ -315,8 +294,8 @@
     .then(response => response.json())
     .then(data => {
         if (data.message) {
-            alert(data.message); // Üzenet megjelenítése sikeres frissítés után
-            location.reload(); // Az oldal újratöltése
+            alert(data.message); 
+            location.reload(); 
         } else {
             throw new Error('Hiba történt');
         }
@@ -344,8 +323,8 @@ document.getElementById('save-password').addEventListener('click', function (eve
     .then(response => response.json())
     .then(data => {
         if (data.message) {
-            alert(data.message); // Üzenet megjelenítése jelszó frissítése után
-            location.reload(); // Az oldal újratöltése
+            alert(data.message); 
+            location.reload(); 
         } else {
             throw new Error('Hiba történt');
         }

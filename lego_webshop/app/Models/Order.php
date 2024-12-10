@@ -11,7 +11,7 @@ class Order extends Model
 
     public function products()
     {
-        return $this->hasMany(Product::class); // Feltételezve, hogy az Order és a Product modellek között hasMany kapcsolat van
+        return $this->hasMany(Product::class); 
     }
 
     protected $fillable = [

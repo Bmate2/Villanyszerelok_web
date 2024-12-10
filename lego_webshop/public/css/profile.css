@@ -1,7 +1,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
+    
     height: 100vh;
 }
 .profile-container{
@@ -9,23 +9,20 @@ body {
     gap: 20px;
 }
 
-
-
-
-
-
-
-
-
-.card {
+.left {
+    background-color: #f8f9fa;
+    padding: 20px;
     margin-top: 30px;
     border-radius: 8px;
     box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.1);
-
+    width: 25%;
+    height: 20%;
 }
 
-.card-body {
-    background-color: #ffffff;
+.left-btn{
+    margin-bottom: 10px;
+    font-weight: bold;
+    border: 1px solid gray;
 }
 
 .card-title {
@@ -36,17 +33,9 @@ body {
 .card-text {
     font-size: 1.1rem;
 }
-
-.btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+h1{
+    font-weight: bold;
 }
-
-.btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004085;
-}
-
 h2 {
     margin-top: 40px;
     margin-bottom: 20px;
@@ -55,55 +44,13 @@ h2 {
 }
 
 .table {
-    border: 1px solid #dee2e6;
-    margin-top: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-}
-
-.table th, .table td {
-    padding: 15px;
-    text-align: left;
+    border: 1px solid gray;
+    text-align: center;
     vertical-align: middle;
+
 }
+.table button{
 
-.table-bordered {
-    border: 1px solid #ddd;
-}
-
-.table thead {
-    background-color: #007bff;
-    color: white;
-}
-
-.table tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
-}
-
-.table tbody tr:hover {
-    background-color: #f1f1f1;
-}
-
-
-td p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #555;
-}
-
-
-h2 + table {
-    margin-top: 40px;
-}
-
-th, td {
-    font-size: 1rem;
-}
-
-th {
-    width: 200px;
-}
-
-td {
-    font-size: 0.9rem;
+    font-weight: bold;
+    border: 1px solid gray;
 }
