@@ -20,56 +20,56 @@ class CartController extends Controller
     }
 
     public function add(Request $request)
-{
-    $product = [
-        'id' => $request->product_id,
-        'name' => $request->product_name,
-        'price' => $request->product_price,
-        'quantity' => $request->quantity,
-    ];
+    {
+        $product = [
+            'id' => $request->product_id,
+            'name' => $request->product_name,
+            'price' => $request->product_price,
+            'quantity' => $request->quantity,
+        ];
 
-    $cart = session()->get('cart', []);
-    
-    $cart = collect($cart); 
+        $cart = session()->get('cart', []);
+        
+        $cart = collect($cart); 
 
 
-    $existingProductIndex = $cart->search(function ($item) use ($product) {
-        return $item['id'] == $product['id'];
-    });
-
-    if ($existingProductIndex !== false) {
-
-        $cart = $cart->transform(function ($item) use ($product) {
-            if ($item['id'] == $product['id']) {
-                $item['quantity'] += $product['quantity'];
-            }
-            return $item;
+        $existingProductIndex = $cart->search(function ($item) use ($product) {
+            return $item['id'] == $product['id'];
         });
-    } else {
 
-        $cart->push($product);
+        if ($existingProductIndex !== false) {
+
+            $cart = $cart->transform(function ($item) use ($product) {
+                if ($item['id'] == $product['id']) {
+                    $item['quantity'] += $product['quantity'];
+                }
+                return $item;
+            });
+        } else {
+
+            $cart->push($product);
+        }
+
+
+        session()->put('cart', $cart->toArray());
+
+        $totalCount = 0;
+        foreach ($cart as $item) {
+            $totalCount += $item['quantity']; 
+        }
+
+
+        session()->put('totalCount', $totalCount);
+
+
+        return redirect()->route('cart.show');
     }
-
-
-    session()->put('cart', $cart->toArray());
-
-    $totalCount = 0;
-    foreach ($cart as $item) {
-        $totalCount += $item['quantity']; 
-    }
-
-
-    session()->put('totalCount', $totalCount);
-
-
-    return redirect()->route('cart.show');
-}
 
 public function update($product_id, $action)
     {
         $cart = session()->get('cart', []);
 
-        // Keresés a kosárban
+
         foreach ($cart as &$item) {
             if ($item['id'] == $product_id) {
                 if ($action == 'increase') {

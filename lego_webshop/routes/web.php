@@ -9,7 +9,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\OrderController;
-
+use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,10 +46,14 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/orders/{id}', [OrderController::class, 'show'])->name('orders.show');
+    Route::patch('/profile/update-password', [ProfileController::class, 'updatePassword'])->name('profile.update-password');
 });
+
 
 Route::get('/login', [ProfileController::class, 'loginCheck'])->name('loginPage');
 
@@ -76,6 +80,12 @@ Route::post('/cart/remove/{product_id}', [CartController::class, 'remove'])->nam
 
 Route::get('/cart/checkout', [CheckoutController::class, 'index'])->name('checkout');
 Route::post('/cart/checkout/store', [CheckoutController::class, 'store'])->name('checkout.store');
-Route::post('/order', [OrderController::class, 'store'])->name('order.store');
+Route::get('/order/success', [OrderController::class, 'success'])->name('order.success');
+Route::middleware('auth')->group(function () {
+    Route::post('order', [OrderController::class, 'store'])->name('order.store');
+    Route::delete('orders/{id}', [OrderController::class, 'destroy'])->name('orders.destroy');
+});
 
-
+Route::get('reviews/{id}/edit', [ReviewController::class, 'edit'])->name('reviews.edit');
+Route::put('reviews/{id}', [ReviewController::class, 'update'])->name('reviews.update');
+Route::delete('reviews/{id}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
