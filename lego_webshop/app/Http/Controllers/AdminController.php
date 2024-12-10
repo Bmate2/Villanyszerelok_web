@@ -84,7 +84,7 @@ class AdminController extends Controller
             return redirect()->back()->with('success', 'Termék módosítása sikeres!');
         }
         catch(Exception $e){
-            return redirect()->back()->with('warning', 'Termék módosítása sikertelen!'. $e->getMessage());
+            return redirect()->back()->with('warning', 'Termék módosítása sikertelen!');
         }
     }
 
@@ -100,7 +100,7 @@ class AdminController extends Controller
             return redirect()->back()->with('warning', 'A termék nem található.');
         }
         catch(Exception $e){
-            return redirect()->back()->with('warning', 'Termék törlése sikertelen!'. $e->getMessage());
+            return redirect()->back()->with('warning', 'Termék törlése sikertelen!');
         }
     }
 }
