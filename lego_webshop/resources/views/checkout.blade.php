@@ -86,7 +86,6 @@
 </div>
 </div>
 
-<div style="height: 30%"></div>
 @include('layouts.footer')
 
 </body>

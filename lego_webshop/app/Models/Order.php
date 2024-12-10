@@ -9,6 +9,10 @@ class Order extends Model
 {
     use HasFactory;
 
+    public function products()
+    {
+        return $this->hasMany(Product::class); // Feltételezve, hogy az Order és a Product modellek között hasMany kapcsolat van
+    }
 
     protected $fillable = [
         'customer_name',

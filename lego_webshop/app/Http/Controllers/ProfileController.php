@@ -8,9 +8,18 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\Order;
+use App\Models\Review;
 
 class ProfileController extends Controller
 {
+    public function show()
+    {
+        $user = Auth::user(); // Az aktuális bejelentkezett felhasználó
+        $orders = Order::where('user_id', $user->id)->get();
+        $reviews = Review::where('user_id', $user->id)->get();
+        return view('profile.profile', compact('user', 'orders', 'reviews'));
+    }
     /**
      * Display the user's profile form.
      */

@@ -1,0 +1,106 @@
+/* Alap stílusok */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    height: 100vh;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-body {
+    background-color: #ffffff;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.table {
+    border: 1px solid #dee2e6;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+}
+
+.table thead {
+    background-color: #007bff;
+    color: white;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table .btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.table .btn-info:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+/* Rendelés termékek megjelenítése */
+td p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Értékelések */
+h2 + table {
+    margin-top: 40px;
+}
+
+th, td {
+    font-size: 1rem;
+}
+
+th {
+    width: 200px;
+}
+
+td {
+    font-size: 0.9rem;
+}
