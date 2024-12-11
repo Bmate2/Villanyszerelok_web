@@ -109,7 +109,14 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="rating">Értékelés (1-5):</label>
-                                    <input type="number" id="rating" name="rating" min="1" max="5" required class="form-control">
+                                    <select id="rating" name="rating" required class="form-control">
+                                        <option value="" disabled selected>Válassz egy értékelést...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="review">Vélemény:</label>
@@ -240,14 +247,12 @@
             quantity: quantity
         },
         success: function(response) {
-            // Sikeres válasz esetén jelenítsd meg az üzenetet
             var cartMessage = document.getElementById('cart-message');
-            cartMessage.style.display = 'block';  // Üzenet megjelenítése
+            cartMessage.style.display = 'block';  
 
-            // Üzenet eltüntetése 5 másodperc múlva
             setTimeout(function() {
                 cartMessage.style.display = 'none';
-            }, 5000);  // 5 másodperc után eltűnik
+            }, 5000); 
         },
         error: function(xhr, status, error) {
             alert("Hiba történt a kosárba tétel közben.");
