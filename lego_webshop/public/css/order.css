@@ -1,10 +1,11 @@
 .info{
     text-align: center;
     font-size: 30px;
-    background-color: rgba(255, 196, 0, 0.534);
+    background-color: rgba(223, 223, 223, 0.219);
     border-radius: 10px;
     padding: 50px;
     border: 1px solid black;
+    box-shadow: 2px 2px 2px gray;
 }
 .home-btn
 {

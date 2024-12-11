@@ -53,8 +53,36 @@
             @endif
         </div>
 
-        <div class="flex items-center justify-center mt-4">
-            <button type="submit" class="bg-yellow-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg border-4 border-yellow-600 hover:bg-yellow-600 transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2">
+        <div class="flex items-center justify-between mt-4">
+        <a class="  underline 
+                        font-bold
+                        text-sm text-gray-600 
+                        hover:text-yellow-600  
+                        rounded-md
+                        focus:ring-yellow-400 
+                        focus:ring-2 
+                        focus:ring-offset-2 
+                        focus:ring-yellow-400
+                        justify-end" 
+                href="{{ route('register') }}">
+                {{ __('Még nincs fiókod?') }}
+            </a>
+            <button type="submit" class=" bg-yellow-500 
+                            text-white 
+                            font-bold 
+                            py-3 
+                            px-6 
+                            rounded-lg 
+                            shadow-lg 
+                            border-4 
+                            border-yellow-600 
+                            hover:bg-yellow-600 
+                            transition-transform 
+                            transform hover:scale-105 
+                            focus:outline-none 
+                            focus:ring-2 
+                            focus:ring-yellow-400 
+                            focus:ring-offset-2">
                 {{ __('Bejelentkezés') }}
             </button>
         </div>

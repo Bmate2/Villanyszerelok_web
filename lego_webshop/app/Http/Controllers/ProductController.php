@@ -79,4 +79,47 @@ class ProductController extends Controller
         return redirect()->route('product.show', $productId)->with('success', 'Értékelés sikeresen hozzáadva!');
     }
 
+    public function index(Request $request)
+{
+    $query = Product::query();
+
+
+    if ($request->has('search') && $request->search) {
+        $searchTerm = $request->search;
+
+        $query->where(function ($query) use ($searchTerm) {
+            $query->where('name', 'like', '%' . $searchTerm . '%')
+                ->orWhere('description', 'like', '%' . $searchTerm . '%')
+                ->orWhere('category', 'like', '%' . $searchTerm . '%')
+                ->orWhere('price', 'like', '%' . $searchTerm . '%')
+                ->orWhere('stock', 'like', '%' . $searchTerm . '%');
+    });
+    }
+
+    if ($request->has('category') && $request->category) {
+        $query->where('category', $request->category);
+    }
+
+    if ($request->has('sort')) {
+        if ($request->sort == 'price_asc') {
+            $query->orderBy('price', 'asc');
+        } elseif ($request->sort == 'price_desc') {
+            $query->orderBy('price', 'desc');
+        } elseif ($request->sort == 'popularity') {
+            $query->orderBy('sales_count', 'desc');
+        } elseif ($request->sort == 'rating') {
+            $query->orderBy('rating_avg', 'desc');
+        } else {
+            $query->latest();
+        }
+    } else {
+        $query->latest();
+    }
+
+    $products = $query->paginate(12);
+
+    $categories = Product::select('category')->distinct()->pluck('category');
+
+    return view('aruk', compact('products', 'categories'));
+}
 }

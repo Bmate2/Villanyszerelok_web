@@ -93,3 +93,5 @@ Route::middleware('auth')->group(function () {
 Route::get('reviews/{id}/edit', [ReviewController::class, 'edit'])->name('reviews.edit');
 Route::put('reviews/{id}', [ReviewController::class, 'update'])->name('reviews.update');
 Route::delete('reviews/{id}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
+
+Route::get('/aruk', [ProductController::class, 'index'])->name('aruk');
