@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Product;
+use App\Models\Order;
 use Illuminate\Http\RedirectResponse;
 use Exception;
 
@@ -102,5 +103,36 @@ class AdminController extends Controller
         catch(Exception $e){
             return redirect()->back()->with('warning', 'Termék törlése sikertelen!');
         }
+    }
+
+
+
+    public function orders()
+    {
+        $orders = Order::all();
+        return view('admin.orders.index', compact('orders'));
+    }
+
+    public function orderDetails($id)
+    {
+        $order = Order::findOrFail($id);
+        return view('admin.orders.details', compact('order'));
+    }
+
+    public function updateOrderStatus(Request $request, $id)
+    {
+        $order = Order::findOrFail($id);
+        $order->status = $request->input('status');
+        $order->save();
+
+        return redirect()->back()->with('success', 'Rendelés státusza frissítve.');
+    }
+
+    public function deleteOrder($id)
+    {
+        $order = Order::findOrFail($id);
+        $order->delete();
+
+        return redirect()->back()->with('success', 'Rendelés törölve.');
     }
 }

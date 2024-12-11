@@ -41,9 +41,7 @@
 
         @auth
             <div class="d-flex align-items-center">
-                @if(auth()->user()->isAdmin())
-                    <a class="nav-link" href="{{ route('admin.dashboard') }}">Admin Felület</a>
-                @endif
+                
               
                 <div class="dropdown">
                   <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -51,8 +49,18 @@
                       {{ ucfirst(auth()->user()->name) }}
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      @if(auth()->user()->isAdmin())
+                      <li>
+                          <a class="dropdown-item" href="{{ route('admin.dashboard') }}">Admin - Termékek kezelése</a>
+                      </li>
+                      <li>
+                          <a class="dropdown-item" href="{{ route('admin.orders') }}">Admin - Rendelések kezelése</a>
+                      </li>
+                      <li><hr class="dropdown-divider"></li>    
+                      @endif
                       <li><a class="dropdown-item" href="{{ route('profile.show') }}">Profilom</a></li>
-                      <li><hr class="dropdown-divider"></li>
+                      <li><hr class="dropdown-divider"></li>                      
+                      
                       <li>
                           <form action="{{ route('logout') }}" method="POST">
                               @csrf

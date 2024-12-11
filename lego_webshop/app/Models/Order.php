@@ -13,7 +13,11 @@ class Order extends Model
     {
         return $this->hasMany(Product::class); 
     }
-
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    
     protected $fillable = [
         'customer_name',
         'customer_email',
