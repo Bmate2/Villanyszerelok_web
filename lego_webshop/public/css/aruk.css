@@ -7,7 +7,6 @@ body {
 
 h1 {
     font-size: 2.5rem;
-    color: #007bff;
 }
 
 form {
@@ -50,13 +49,13 @@ form .form-control {
 }
 
 .card-title {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: bold;
     color: #333;
 }
 
 .card-text {
-    height: 40px;
+    height: 50px;
     font-size: 0.9rem;
     color: #666;
 }
