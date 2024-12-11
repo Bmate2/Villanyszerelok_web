@@ -22,7 +22,18 @@
             Összesen fizetett összeg: <strong>{{ $order->total_price }} Ft</strong>
         </p>
         <p>
-            Fizetési mód: <strong>{{ ucfirst($order->payment_method) }}</strong>
+        Fizetési mód: 
+            <strong>
+                @if($order->payment_method == 'cash_on_delivery')
+                    Utánvétel
+                @elseif($order->payment_method == 'paypal')
+                    PayPal fizetés
+                @elseif($order->payment_method == 'credit_card')
+                    Bankkártyás fizetés
+                @else
+                    {{ ucfirst($order->payment_method) }}
+                @endif
+            </strong>
         </p>
         <p>
             Email-cím: <strong>{{ ucfirst($order->customer_email) }}</strong>

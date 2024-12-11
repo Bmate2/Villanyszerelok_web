@@ -21,7 +21,7 @@ class ReviewSeeder extends Seeder
         $users = User::all();
 
         foreach ($products as $product) {
-            foreach ($users->random(rand(5, 20)) as $user) {
+            foreach ($users->random(rand(30, 70)) as $user) {
                 Review::create([
                     'product_id' => $product->id,
                     'user_id' => $user->id,

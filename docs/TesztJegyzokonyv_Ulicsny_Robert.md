@@ -23,3 +23,7 @@
 | 17 | Rendelés törlése admin felületből | A rendelést töröljük az adatbázisból | Helyes működés | - |
 | 18 | Rendelés státuszának módosítása admin felületből | A rendelést státuszát átállítjuk a kiválasztott opcióra | Helyes működés | - |
 | 19 | Admin felületről átirányítás termékhez | A termék kártyára kattintva az oldal átirányul a termék oldalára | Nem létező oldalra került átirányítás | Probléma megoldva, rosszul volt linkelve |
+| 20 | Árúk közötti keresés | A beírt szövegre visszadja a termékekekt amelyek tartalmazzák azt | Csak a név attribútumban keresett egyezést | Bővítettem a metódust hogy az összes attribútum között keressen |
+| 21 | Kategória szerinti szűrés | A kiválasztott kategóriával rendelkező termékeket megjeleníti | Helyes működés | - |
+| 22 | Termékek rendezése | A kiválasztott opció szerint rendezi a termékeket | Helyes működés | - |
+
